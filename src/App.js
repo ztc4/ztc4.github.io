@@ -96,13 +96,13 @@ function App() {
      I once messed up my project playing with TypeScript, so I had to find a git version that didn't mess up my deploy.
      `,
     images: [
-    {name: "homescreen", link: "../images/ecommerce-1.png"},
-    {name: "homescreen", link: "../images/ecommerce-2.png"},
-    {name: "homescreen", link: "../images/ecommerce-3.png"},
-    {name: "homescreen", link: "../images/ecommerce-4.png"},
-    {name: "homescreen", link: "../images/ecommerce-cart.png"},
-    {name: "homescreen", link: "../images/ecommerce-checkout.png"},
-    {name: "homescreen", link: "../images/ecommerce-shopify.png"}
+    {name: "ecommerce", link: "../images/ecommerce-1.png"},
+    {name: "ecommerce", link: "../images/ecommerce-2.png"},
+    {name: "ecommerce", link: "../images/ecommerce-3.png"},
+    {name: "ecommerce", link: "../images/ecommerce-4.png"},
+    {name: "ecommerce", link: "../images/ecommerce-cart.png"},
+    {name: "ecommerce", link: "../images/ecommerce-checkout.png"},
+    {name: "ecommerce", link: "../images/ecommerce-shopify.png"}
 
 ],
     accomplishments: `The first accomplishment would most likely be learning Next.js, it was what I set off to do, so no surprise there.
@@ -172,7 +172,7 @@ function changeContact(e){
   return (
   <div className={(skillModal.active || projectModal.active) ? `App m-0  overflow-y-hidden`: `App m-0 bg-slate-200 overflow-x-hidden`}>
       
-      <header className={`min-h-screen w-screen App-header bg-slate-900 text-slate-200 pl-14 pr-10 py-8  `}>
+      <header className={`min-h-screen w-screen App-header bg-neutral-900 text-slate-200 pl-8 md:pl-20 pr-10 py-8  `}>
         
         <div className="flex flex-row flex-nowrap items-center ">
           <img src={"../images/mainpic.jpg"} alt="picture of me" className="h-12 w-12 md:w-20 md:h-20 rounded-full mr-8 "></img>
@@ -185,24 +185,24 @@ function changeContact(e){
         
         
         
-        <h2 className="text-4xl text-slate-200 mt-24  uppercase tracking-wider font-light mb-4">
+        <h2 className="text-4xl text-slate-200 mt-16  uppercase tracking-wider font-light mb-4">
          Introduction
         </h2>
-        <p className="md:text-lg  md:w-4/6 lg:w-7/12">
-        I am a software engineers who's harbor an great interest in exploring many different applications of programming .
+        <p className="md:text-sm tracking-tighter indent-8 xl:text-xl xl:tracking-wider font-normal text-gray-400 font-sans    md:w-4/6 xl:w-7/12">
+          I'm a software engineers who's harbor a great interest in exploring many different applications of programming.
         During the past two years, I have spent a tremendous amount of time learning and practicing computer programming, mainly in anything surrounding web development 
         but I have also not forgotten to educate myself on the fundamentals like
         algorithms and data structures, problem-solving, and building and launching real-world products online.
         <br></br>
         <br></br>
-        <spam className="mt-4">
+        <spam className="mt-4 indent-5">
           When it comes to web development I currently use Javascript for the front-end and back-end. 
-          I feel as if on the front-end of things I could pretty much make about anything that requires of me, 
+          On the front-end of side I understand the principles around css and javascript that i'm confident in make anything that requires of me, 
           but am often stunted due to lack of web design instead of anything like css.
         </spam>
         <br></br>
         <br></br>
-        <spam className="mt-4">
+        <spam className="mt-4 ">
         Lately I've taken a great interest into branching out of web development by learning Java, finally adding my second language and shifting into more complex languages that allow me control things like multithreading and restricting myself to object oriented principles.
         </spam>
      
@@ -212,7 +212,7 @@ function changeContact(e){
      
 
       </header>
-      <section className="min-h-screen min-h-screen w-screen what-section bg-slate-600 py-8 text-slate-200   pr-10 m-0">
+      <section className="min-h-screen  w-screen what-section bg-neutral-600 py-8 text-white   pr-10 m-0">
         <h2 className="uppercase text-center text-4xl mt-16 font-semibold">What I DO</h2>
         <div className="pl-16 my-14 flex flex-row w-full md:w-4/6 m-auto md:text-lg">
           <div className="h-8 w-8 rounded-full  self-center  bg-stone-800"></div>
@@ -223,18 +223,19 @@ function changeContact(e){
             I am an expert in React, and use a fair bit of Next.js for more complex projects with multiply pages.
           </p>
         </div>
-        <div className="pl-16 my-14 flex flex-row w-full md:w-4/6 m-auto md:text-lg">
+        <div className="pl-16 my-14 flex flex-row w-full md:w-4/6 m-auto lg:text-xl md:text-lg">
           <div className="h-8 w-8 rounded-full  self-center bg-stone-800"></div>
           <p className="ml-4">
           <span className="font-bold">Back-end Development: </span> 
-           For server applications, most of the time, I use Node.js, Python, and C++ for cases that performance is critical. 
-           When developing back-end systems,
-           I always pay great attention to security, scalability, and performance.
+          For server applications or anything that runs outside of the browser, most of the time, I use Node.js, and sometimes I would just opt to learn different programming languages just to take advantage of specific features, 
+or mainly special libraries created by the community in this community. 
+           When developing API,
+           I always pay great attention to trying my best to limit the api calls clients will have to make, this applies to both front-end and back-end. In situation where users data is needed, I usually hash users passwords and use authentication tokens!
           </p>
         </div>
 
       </section>
-      <section className="min-h-screen w-screen skills bg-slate-950 py-8 text-slate-200    m-0">
+      <section className="min-h-screen w-screen skills bg-neutral-900 py-8 text-slate-200  m-0">
         <h2 className="uppercase text-center text-4xl">Skills</h2>
         <div className="w-36 h-1 mt-6 bg-stone-400 mx-auto shadow-sm "></div>
         <div className="flex md:flex-row mx-auto flex-col items-center md:w-4/6 flex-wrap justify-center my-8">
