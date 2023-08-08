@@ -113,6 +113,43 @@ function App() {
 
 },
 {
+  title: "Material UI Notes ",
+  goals: `Learn to create websites using material UI`,
+  description: `I took an older project for an notes application, and recreated an new ui for it using the material ui application`,
+  issues:` Fix alot of errors in the api I was using to not cause errors, and add a few more endpoints to make the site crash less 
+   `,
+  images: [
+  {name: "Note Image", link: "../images/note1.png"},
+  {name: "Note Image", link: "../images/note3.png"},
+  {name: "Note Image", link: "../images/note$.png"},
+  {name: "Note Image", link: "../images/note5.png"},
+  {name: "Note Image", link: "../images/note6.png"},
+  {name: "Note Image", link: "../images/note7.png"}
+
+],
+  accomplishments: `This is the first website I ever used an state manager like React Context `,
+  githubLink: "https://github.com/ztc4/note-task-frontend",
+  deployment: "note-task-frontend.vercel.app",
+  backend:"https://github.com/ztc4/note-task-backend"
+
+},
+{
+  title: "Android Contact List",
+  goals: `Solidify knowledge of data persistence(local database) with Room. Understand State and Navigation in Android. Practice newly acquired kotlin skills.`,
+  description: `An android application created using jetpack compose, room, kotlin and the mvm architecture`,
+  issues:` Issued understanding what I was implementing due to documentation; I was making it work but wasn't understanding whats an entity, or dao was, I struggled understanding these things connected.
+   `,
+  images: [
+  {name: "Contact List Image", link: "../images/contacts1.png"},
+  {name: "Contact List Image", link: "../images/contacts2.png"},
+
+
+],
+  accomplishments: `Understanding how to use create and use local databases in the future, and understanding how to use this data using the Viewmodel layer. I also learned the MVM Architecture< and how to implement it into future projects `,
+  githubLink: "https://github.com/ztc4/Contact-List-Kotlin",
+
+},
+{
     title: "Javascript Personal Game",
     goals: `Not many goals going into this, Just generally interested in exploring the event Listeners behind games and the oop principles that was shown in small tutorial video games.`,
     description: `A game that allow you to move the your player, interact with other characters(npcs) that allow you to access dialogs to understand your current task and even fight enemies.`,
@@ -128,7 +165,7 @@ function App() {
 
 },
 {
-  title: "Share, Create, Edit & Sort Task",
+  title: "Share, Create, Edit & Sort Task(Outdated)",
   goals: `This is my first self-created full stack projects. 
   The goal when starting this project was to learn how to make a server(express.js),
   use a database to store data and learning how to connect client-side(front-end) to back-end `,
