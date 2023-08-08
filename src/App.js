@@ -20,6 +20,13 @@ function App() {
        Initially I learned javaFx, but even that seemed outdated. My current opinion of the language is that its useless outside of an corporate back-end development environment.
         When I first learned this language I was interested in implementing an artificial neural network, but I later realized I should of just learned python or went with C/C++.
         It might not be a total lost cause, because I might run into kotlin in the future`
+    },{
+      name: "Kotlin",
+      description: `I learned this language for development in Android Applications`
+    },
+    {
+      name: "Jetpack Compose",
+      description: `This is the main library used when created mobile Applications. Learned it mainly because it's what used when learning android development through Google Android development course.`
     },
     {
       name: "Node.js",
