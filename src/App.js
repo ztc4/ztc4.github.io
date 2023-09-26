@@ -3,67 +3,14 @@ import SkillButton from "./components/SkillButton";
 import SkillModal from "./components/Skillmodal";
 import ProjectButton from "./components/projectButton";
 import ProjectModal from "./components/ProjectModal";
+import {motion, AnimatePresence} from "framer-motion"
+import { skills, projects } from "./skills";
+import { whatIdo } from "./pageText";
 
 function App() {
 
   const [skillModal,setSkillModal,]= React.useState({active:false,currentSkillOpened: 1})
-  const skills = [
-    {
-    name: "JavaScript",
-    description: `The first programming language I learned.
-     I would say this is the language i'm most proficient in using, 
-     and prefer to use just because of the familiarity of the syntax and my understand of the underlying structure of the language.
-      As a result of this being my first language, I learnt many features that are javacript specific like hoisting, event loop and even its prototype inheritance system(OOP for Javascript). `},
-    {
-      name: "Java",
-      description: `I have a little proficiency with java, the main reason is I don't use it as often for projects and I couldn't really find any advantages of the language compared to others.
-       Initially I learned javaFx, but even that seemed outdated. My current opinion of the language is that its useless outside of an corporate back-end development environment.
-        When I first learned this language I was interested in implementing an artificial neural network, but I later realized I should of just learned python or went with C/C++.
-        It might not be a total lost cause, because I might run into kotlin in the future`
-    },{
-      name: "Kotlin",
-      description: `I learned this language for development in Android Applications`
-    },
-    {
-      name: "Jetpack Compose",
-      description: `This is the main library used when created mobile Applications. Learned it mainly because it's what used when learning android development through Google Android development course.`
-    },
-    {
-      name: "Node.js",
-      description: `I would say node.js is one of the key tools,
-       but I don't want to use this section to talk about things 
-       like express, or mongoose.
-        I would rather talk about my understanding of nodes built in modules and features. 
-        I've got some experience with the fundamentals like implementing my own streams(readable or writable) and sending buffer data across it. Worked with Event emitters, learned about binary data and went into networking layers.`
-    },
-    {
-      name: "React.js",
-      description: "When first learning things like javascript, html and css I still couldn't understand how some of my favorite sites used their data in a flexible manner. Learning react and how it takes things beyond the simple static website by saving the trouble of creating elements with vanilla javascript really opened my eyes! I can use the core features like life cycle(useEffect) and controlling state(useState) without looking at things like documention."
-    },
-    {
-      name: "Next.js",
-      description: `Not much to take away from next.js because its used to simplify things I've already done before like structuring my routing.
-       The concept of being able to divide server side and client side rendering on some react components to allow for better seo is outputs the number reason this would be my go to framework.
-       I've used alittle of the api feature but still prefer creating my api myself using a back-end framework like express.`
-    },
-    {
-      name: "CSS",
-      description: "Learned more than enought css, prefer to use flexbox over grid."
-    },
-    {
-      name: "Tailwind CSS",
-      description: "I would use tailwind css over css anyday just because of the speed I can implement most things. When first learning I thought it made the code to long, but once you really understand the words for the properties, and the abiility to not have to create new ids or classes for elements it looks way more structures"
-    },
-    {
-      name: "MongoDB",
-      description: "This my go to for database, especially because I can easily set up an database on the cloud with mongo atlas. I personally like to use the mongoose framework , and haven't used just regular mongodb in months. I can connect documents and even add subdocuments with ease."
-    },
-    {
-      name: "Git",
-      description: " I know how to branch off my work, add,commit and push to github. Not much to put here "
-    }
-
-  ];
+ 
   function openModal(num){
     setSkillModal(current => ({...current, active: true, currentSkillOpened: num}))
     console.log("opened the modal")
@@ -88,114 +35,7 @@ function App() {
     setProjectModal(current => ({...current, active:false}))
   }
 
-  const projects = [
-{
-    title: "Ecommerce site w/ stripe as payment system",
-    goals: `Learn how to use Stripe Api.
-    Learn the ins and outs of Next.js, mainly how to use the Search Engine Optimizations features and,
-    making a backend using the in-built api features `,
-    description: `The project itself is simplistic itself, try to mimic an online shopping site.
-     I focused less on login/logout functionally and instead went for just a simple cart feature that connected to stripe.
-      I somehow found the tradeoffs that next.js can inccur with trying to optimize SEO and using react client components.  `,
-    issues:` I couldn't get the inbuilt api to work how I wanted(I was on a experimental version at the time) so just opted for an outside server with express.js.
-     I also made errors in structuring which components should be clientside & which should be server side.
-     This ended up with me not having an overarching state(redux,context) and instead making several extra api calls to my server and sending more data than it should be.
-     I once messed up my project playing with TypeScript, so I had to find a git version that didn't mess up my deploy.
-     `,
-    images: [
-    {name: "ecommerce", link: "../images/ecommerce-1.png"},
-    {name: "ecommerce", link: "../images/ecommerce-2.png"},
-    {name: "ecommerce", link: "../images/ecommerce-3.png"},
-    {name: "ecommerce", link: "../images/ecommerce-4.png"},
-    {name: "ecommerce", link: "../images/ecommerce-cart.png"},
-    {name: "ecommerce", link: "../images/ecommerce-checkout.png"},
-    {name: "ecommerce", link: "../images/ecommerce-shopify.png"}
-
-],
-    accomplishments: `The first accomplishment would most likely be learning Next.js, it was what I set off to do, so no surprise there.
-     An unexpected accomplishment would be learning Tailwind, I made a mockery of it before, I thought it made the code look like gibberish 
-    but now I'm contemplating remaking this very portfolio site using it and my 500+ lines of css for this site look like garbage in comparison.`,
-    githubLink: "https://github.com/ztc4/Ecommerce-Nextjs",
-    deployment: "https://ecommerce-nextjs-xi-nine.vercel.app/",
-
-},
-{
-  title: "Material UI Notes ",
-  goals: `Learn to create websites using material UI`,
-  description: `I took an older project for an notes application, and recreated an new ui for it using the material ui application`,
-  issues:` Fix alot of errors in the api I was using to not cause errors, and add a few more endpoints to make the site crash less 
-   `,
-  images: [
-  {name: "Note Image", link: "../images/note1.png"},
-  {name: "Note Image", link: "../images/note3.png"},
-  {name: "Note Image", link: "../images/note$.png"},
-  {name: "Note Image", link: "../images/note5.png"},
-  {name: "Note Image", link: "../images/note6.png"},
-  {name: "Note Image", link: "../images/note7.png"}
-
-],
-  accomplishments: `This is the first website I ever used an state manager like React Context `,
-  githubLink: "https://github.com/ztc4/note-task-frontend",
-  deployment: "note-task-frontend.vercel.app",
-  backend:"https://github.com/ztc4/note-task-backend"
-
-},
-{
-  title: "Android Contact List",
-  goals: `Solidify knowledge of data persistence(local database) with Room. Understand State and Navigation in Android. Practice newly acquired kotlin skills.`,
-  description: `An android application created using jetpack compose, room, kotlin and the mvm architecture`,
-  issues:` Issued understanding what I was implementing due to documentation; I was making it work but wasn't understanding whats an entity, or dao was, I struggled understanding these things connected.
-   `,
-  images: [
-  {name: "Contact List Image", link: "../images/contacts1.png"},
-  {name: "Contact List Image", link: "../images/contacts2.png"},
-
-
-],
-  accomplishments: `Understanding how to use create and use local databases in the future, and understanding how to use this data using the Viewmodel layer. I also learned the MVM Architecture< and how to implement it into future projects `,
-  githubLink: "https://github.com/ztc4/Contact-List-Kotlin",
-
-},
-{
-    title: "Javascript Personal Game",
-    goals: `Not many goals going into this, Just generally interested in exploring the event Listeners behind games and the oop principles that was shown in small tutorial video games.`,
-    description: `A game that allow you to move the your player, interact with other characters(npcs) that allow you to access dialogs to understand your current task and even fight enemies.`,
-    issues:` Videos were boring so I dropped them after learning the basic collision using squares, and manipulation of the canvas itself.
-     `,
-    images: [
-      {name: "Group page", link: "../images/Current-Group.png"},
-
-],
-    accomplishments: `Greater understanding writing code in a non web-development sense`,
-    githubLink: "https://github.com/ztc4/Personal-Game-Project",
-    deployment: "https://personal-game-project.vercel.app/",
-
-},
-{
-  title: "Share, Create, Edit & Sort Task(Outdated)",
-  goals: `This is my first self-created full stack projects. 
-  The goal when starting this project was to learn how to make a server(express.js),
-  use a database to store data and learning how to connect client-side(front-end) to back-end `,
-  description: `This project allows user to create a task with a title, description, and even able to add a due date. 
-  You are allowed to not only create personal task, but also join or create your own group then assign task to this group.
-  Users can easily edit their task, delete task and search task by title, or type(personal or group)`,
-  issues:"When making this project I struggled in editing and deleting subdocuments that were arrays filled with objects, also I struggled linking my pages together due to not knowing react-router ",
-  images: [
-  {name: "Login", link: "../images/Home-Screen.png"},
-  {name: "Task", link: "../images/Properties.png"},
-  {name: "Create Note", link: "../images/Create-Note.png"},
-  {name: "Group page", link: "../images/Current-Group.png"},
-  {name: "Edit Note", link: "../images/Edit-Note.png"}
-],
-accomplishments: `The first accomplishment would most likely be learning Next.js, it was what I set off to do, so no surprise there.
-An unexpected accomplishment would be learning Tailwind, I made a mockery of it before, I thought it made the code look like gibberish 
-but now I'm contemplating remaking this very portfolio site using it and my 500+ lines of css for this site look like garbage in comparison.`,
-githubLink: "https://github.com/ztc4/Full-Stack-Task-App",
-deployment: "",
-
-},
-
-]
+  
 
 
 
@@ -218,74 +58,94 @@ function changeContact(e){
       
       <header className={`min-h-screen w-screen App-header bg-neutral-900 text-slate-200 pl-8 md:pl-20 pr-10 py-8  `}>
         
-        <div className="flex flex-row flex-nowrap items-center ">
-          <img src={"../images/mainpic.jpg"} alt="picture of me" className="h-12 w-12 md:w-20 md:h-20 rounded-full mr-8 "></img>
+        <motion.div
+                                      initial={{ opacity: 0, x: -300 }} 
+                                     animate={{ opacity: 1, x: 0 }}   
+                                      transition={{ duration: 1 }}  
+        
+  
+        className="flex flex-row flex-nowrap items-center ">
+          <motion.img
+          whileTap={{scale:1.10, zIndex:4}}
+          
+          src={"../images/mainpic.jpg"} alt="picture of me" className="h-12 w-12 md:w-20 md:h-20 rounded-full mr-8 "></motion.img>
           <div>
             <h2 className="text-2xl opacity-90 md:text-4xl text-neutral-300  tracking-wider">Zachary Coats</h2>
             <h3 className="text-sm text-neutral-500 md:text-lg opacity-70 tracking-tighter -mt-2">Software Engineer</h3>
           </div>
           
-        </div>
+        </motion.div>
         
         
         
-        <h2 className="text-4xl text-slate-200 mt-16  uppercase tracking-wider font-light mb-4">
+        <motion.h2
+                  initial={{ opacity: 0, x: -300 }} 
+                  animate={{ opacity: 1, x: 0 }}   
+                  transition={{ duration: 1.2 }}  
+        className="text-4xl text-slate-200 mt-16  uppercase tracking-wider font-light mb-4">
          Introduction
-        </h2>
-        <p className="md:text-sm tracking-tighter indent-8 xl:text-xl xl:tracking-wider font-normal text-gray-400 font-sans    md:w-4/6 xl:w-7/12">
-          I'm a software engineers who's harbor a great interest in exploring many different applications of programming.
-        During the past two years, I have spent a tremendous amount of time learning and practicing computer programming, mainly in anything surrounding web development 
-        but I have also not forgotten to educate myself on the fundamentals like
-        algorithms and data structures, problem-solving, and building and launching real-world products online.
+        </motion.h2>
+        <motion.p
+                                      initial={{ opacity: 0, x: -300 }} 
+                                      animate={{ opacity: 1, x: 0 }}   
+                                      transition={{ duration: 1.2}}  
+        className="md:text-[16px] tracking-tighter indent-8  xl:tracking-wider font-normal text-gray-400 font-sans    md:w-4/6 xl:w-7/12">
+            {whatIdo.Introduction.p1}
         <br></br>
         <br></br>
         <spam className="mt-4 indent-5">
-          When it comes to web development I currently use Javascript for the front-end and back-end. 
-          On the front-end of side I understand the principles around css and javascript that i'm confident in make anything that requires of me, 
-          but am often stunted due to lack of web design instead of anything like css.
+        {whatIdo.Introduction.p2}
         </spam>
         <br></br>
         <br></br>
         <spam className="mt-4 ">
-        Lately I've taken a great interest into branching out of web development by learning Java, finally adding my second language and shifting into more complex languages that allow me control things like multithreading and restricting myself to object oriented principles.
+        {`${whatIdo.Introduction.p3}`}
         </spam>
      
         
 
-    </p>
+        </motion.p>
      
 
       </header>
-      <section className="min-h-screen  w-screen what-section bg-neutral-600 py-8 text-white   pr-10 m-0">
+      <section className="min-h-screen w-screen flex flex-col gap-1 justify-center  bg-neutral-600 py-8 text-white  ">
         <h2 className="uppercase text-center text-4xl mt-16 font-semibold">What I DO</h2>
-        <div className="pl-16 my-14 flex flex-row w-full md:w-4/6 m-auto md:text-lg">
-          <div className="h-8 w-8 rounded-full  self-center  bg-stone-800"></div>
-          <p className="ml-4">
-          <span className="font-bold">Front-end Development:</span> I develop responsive, modern-looking front-ends.
-           Most of the time, I use css , and  lately i've been using tailwind css for speed and ease of doing projects,
-            I don't have much familiarity for component base css frameworks, but have an interest in learning one. As for JavaScript,
-            I am an expert in React, and use a fair bit of Next.js for more complex projects with multiply pages.
+        <motion.div
+                              initial={{ opacity: 0, x: -300 }} 
+                              whileInView={{ opacity: 1, x: 0 }}   
+                              transition={{ duration: 1 }}  
+        className=" flex flex-row w-full md:w-4/6 m-auto md:text-lg">
+          
+        <p className=" font-sans md:text-[16px] ">
+        <span className="font-bold">Front-end Development:</span> 
+        {whatIdo.frontend.paragraph}
           </p>
-        </div>
-        <div className="pl-16 my-14 flex flex-row w-full md:w-4/6 m-auto lg:text-xl md:text-lg">
-          <div className="h-8 w-8 rounded-full  self-center bg-stone-800"></div>
-          <p className="ml-4">
-          <span className="font-bold">Back-end Development: </span> 
-          For server applications or anything that runs outside of the browser, most of the time, I use Node.js, and sometimes I would just opt to learn different programming languages just to take advantage of specific features, 
-or mainly special libraries created by the community in this community. 
-           When developing API,
-           I always pay great attention to trying my best to limit the api calls clients will have to make, this applies to both front-end and back-end. In situation where users data is needed, I usually hash users passwords and use authentication tokens!
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -300 }} 
+          whileInView={{ opacity: 1, x: 0 }}   
+          transition={{ duration: 1.2 }}  
+          className=" flex flex-row w-full md:w-4/6 m-auto md:text-lg">
+         
+          <p className=" md:text-[16px] font-sans ">
+            <span className="font-bold ">Back-end Development: </span> 
+            {whatIdo.backend.paragraph}
           </p>
-        </div>
+        </motion.div>
 
       </section>
       <section className="min-h-screen w-screen skills bg-neutral-900 py-8 text-slate-200  m-0">
         <h2 className="uppercase text-center text-4xl">Skills</h2>
         <div className="w-36 h-1 mt-6 bg-stone-400 mx-auto shadow-sm "></div>
-        <div className="flex md:flex-row mx-auto flex-col items-center md:w-4/6 flex-wrap justify-center my-8">
+        <motion.div
+                      initial={{ opacity: 0, x: -100 }} 
+                      whileInView={{ opacity: 1, x: 0 }}   
+                      transition={{ duration: 1 }}  
+        
+        className="grid grid-cols-1 grid-flow-row gap-3 p-8 md:p-4 md:grid-cols-3 justify-center items-center w-full flex-wrap justify-center my-8">
           {skillbuttons}
 
-        </div>
+        </motion.div>
 
         
         
@@ -293,10 +153,16 @@ or mainly special libraries created by the community in this community.
       </section>
       <section className="min-h-screen w-screen skills bg-zinc-800 py-8 text-slate-200   pr-10 m-0">
         <h2 className="uppercase text-center mb-8 text-4xl">Projects</h2>
-        <div className="flex flex-col w-screen md:flex-row items-center justify-center ">
+        <motion.div
+              initial={{ opacity: 0, y: -100 }} 
+              whileInView={{ opacity: 1, y: 0 }}   
+              transition={{ duration: 1 }}  
+              
+        
+        className="grid grid-cols-1 grid-flow-row gap-3 p-8 md:p-4 md:grid-cols-3 w-screen min-h-fit  items-center justify-center ">
           {projectbutton}
 
-        </div>
+        </motion.div>
         
       </section>
             <section className="min-h-screen w-screen skills bg-neutral-900 py-8 text-slate-200   pr-10 m-0">
@@ -319,9 +185,10 @@ or mainly special libraries created by the community in this community.
   <a href="https://www.linkedin.com/in/zachary-coats-651211270/" className="ml-8   text-md text-stone-400 px-2 font-medium tracking-tighter">https://www.linkedin.com/in/zachary-coats-651211270/</a></div>
 
 </section>
-
-{skillModal.active && <SkillModal data={skills[skillModal.currentSkillOpened]} closeModal={closeModal}/>}
-{projectModal.active && <ProjectModal data={projects[projectModal.currentSkillOpened]} closeModal={closeProjectModal}/>}
+<AnimatePresence>
+  {skillModal.active && <SkillModal data={skills[skillModal.currentSkillOpened]} closeModal={closeModal}/>}
+  {projectModal.active && <ProjectModal data={projects[projectModal.currentSkillOpened]} closeModal={closeProjectModal}/>}
+</AnimatePresence>
 </div>
   );
 }

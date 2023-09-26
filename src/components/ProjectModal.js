@@ -1,17 +1,19 @@
 import React from "react"
+import {motion, AnimatePresence} from "framer-motion"
 
 function ProjectModal({data, closeModal}) {
     const [currentImage,setCurrentImage]= React.useState(0)
     function add(){
-        if(currentImage >= data.images.length - 1){
-            return setCurrentImage(current => 0)
+        if(currentImage < data.images.length - 3){
+            setCurrentImage(current => current +1)
         }
         else{
-        setCurrentImage(current => current +1)}
         console.log(currentImage)
     }
+        
+    }
     function remove(){
-        if(currentImage <= 0){
+        if(currentImage >= 0){
             return setCurrentImage(current => data.images.length - 1)
         }
         else{
@@ -26,13 +28,30 @@ function ProjectModal({data, closeModal}) {
    
     return (
         <div className=" h-screen md:p-auto  z-10  bottom-0 right-[0%] w-full  bg-slate-300 bg-opacity-50 fixed overflow-auto p-4 4">
-            <div className="bg-slate-200 h-screen md:h-5/6 w-full md:w-10/12 md:mx-auto flex flex-col overflow-y-auto rounded-md shadow-md z-20 shadow-black pb-8 ">
+            <div className="bg-slate-200 overflow-hidden h-screen md:h-5/6 w-full md:w-10/12 md:mx-auto flex flex-col overflow-y-auto rounded-md shadow-md z-20 shadow-black pb-8 ">
                 <div className="flex flex-row  py-3 flex-nowrap justify-between text-3xl border-b-2 border-solid border-slate-900">
                     <h5 className="text-2xl ml-8">{data.title || "title"}</h5>
                     <button className="float-right mr-4 hover:text-neutral-700 text-neutral-500 " onClick={closeModal}>x</button>
                 </div>
-                <img src={image} alt="Project Images" className=" w-full p-2 rounded-xl"></img>
+                <motion.div 
+                className="flex gap-4 w-80 flex-nowrap justify-center "
+                animate={{x:`calc(-${currentImage * 100}% - ${currentImage}rem)`}}
+                >
+               
+                    { data.images.map( (image,index) =>(<motion.img
+                        layout
+                        key={index}
+                        src={image.link}
+                           
+                        className="w-full h-60"
+                        />))}
+              
+
+                </motion.div>
+                <p className=" text-red-700 text-center font-bold">Animation is currently not working properly! Get to soon</p>
+                
                 <div className="w-full flex flex-row justify-center">
+                    
                     <button className="h-12 w-12 bg-neutral-500 rounded-full m-2 opacity-70 hover:opacity-90" onClick={remove}>{`<--`}</button>
                     <button className="h-12 w-12 bg-neutral-500 rounded-full m-2 opacity-70 hover:opacity-90" onClick={add}>{`-->`}</button>
                 </div>
