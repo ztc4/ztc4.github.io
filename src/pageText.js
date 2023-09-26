@@ -2,14 +2,25 @@ export const whatIdo = {
 
     Introduction:{
 
-        p1:`          I'm a software engineers who's harbor a great interest in exploring many different applications of programming.
-        During the past two years, I have spent a tremendous amount of time learning and practicing computer programming, mainly in anything surrounding web development 
+        p1:`          I'm Software Engineer based in Atlanta,Georgia who's harbor a great interest in exploring many different applications of programming.
+        During the past two years, I have spent a tremendous amount of time learning and practicing computer programming, 
+        mainly in anything surrounding web development and some android development,
         but I have also not forgotten to educate myself on the fundamentals like
-        algorithms and data structures, problem-solving, and building and launching real-world products online.`,
-        p2:`          When it comes to web development I currently use Javascript for the front-end and back-end. 
-        On the front-end of side I understand the principles around css and javascript that i'm confident in make anything that requires of me, 
-        but am often stunted due to lack of web design instead of anything like css.`,
-        p3:`Lately I've taken a great interest into branching out of web development by learning Java, finally adding my second language and shifting into more complex languages that allow me control things like multithreading and restricting myself to object oriented principles.`
+        algorithms and data structures, problem-solving, and building practical applications`,
+
+        p2:`          When it comes to web development, I mainly develop in Javascript for Client-Side and Server-Side, 
+        althought lately I've been thinking of trying out SpringBoot using Kotlin. 
+        When it comes to backend, I mainly use REST APIs, but have some experience with GRAPHQL. 
+        Most of my projects use the NoSQL database of mongodb, this is the database that I feel most confident when trying to optimize queries, 
+        and using advanced quering features. On the frontend side of things, 
+        I've been bring more animation, and design skills like wireframing to make better applications. 
+        I've mainly been using tailwind css when taking my wireframes to code, but also skilled in MaterialUI `,
+
+
+        p3:`Lately I've been perfecting my web skills, and trying to expand my understanding of skills that are largely used in a professional settings. 
+        Somethings I've been doing in the upcoming and past few days include learning framer motion for animation, learning the essentials of SQL, 
+        filling in any gaps for kotlin that I might not understand before learning Springboot.
+        Currently interested in any opportunities, contact information at the bottom.`
     },
 
    frontend: {

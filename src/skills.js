@@ -52,6 +52,14 @@ export const skills = [
     {
       name: "Git",
       description: " I know how to branch off my work, add,commit and push to github. Not much to put here "
+    },
+    {
+      name: "Testing",
+      description: " Mainly focusing on unit test, and maybe some integration test. Recently made my first test driven development project"
+    },
+    {
+      name: "Figma",
+      description: " I  have learned wireframing using figma, and turning that wireframe into a real-world project "
     }
 
   ];
