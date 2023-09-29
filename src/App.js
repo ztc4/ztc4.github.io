@@ -56,7 +56,7 @@ function changeContact(e){
   return (
   <div className={(skillModal.active || projectModal.active) ? `App m-0  overflow-y-hidden`: `App m-0 bg-slate-200 overflow-x-hidden`}>
       
-      <header className={`min-h-screen w-screen App-header bg-neutral-900 text-slate-200 pl-8 md:pl-20 pr-10 py-8  `}>
+      <header className={`min-h-screen w-screen App-header bg-neutral-900 text-slate-200  flex  items-center flex-col py-8 px-4 `}>
         
         <motion.div
                                       initial={{ opacity: 0, x: -300 }} 
@@ -64,7 +64,7 @@ function changeContact(e){
                                       transition={{ duration: 1 }}  
         
   
-        className="flex flex-row flex-nowrap items-center ">
+        className="flex flex-row flex-nowrap sm:w-3/5 x-32 self-center ">
           <motion.img
           whileTap={{scale:1.10, zIndex:4}}
           
@@ -108,13 +108,13 @@ function changeContact(e){
      
 
       </header>
-      <section className="min-h-screen w-screen flex flex-col gap-1 justify-center  bg-neutral-600 py-8 text-white  ">
-        <h2 className="uppercase text-center text-4xl mt-16 font-semibold">What I DO</h2>
+      <section className="min-h-screen w-screen flex flex-col gap-1 px-4  bg-neutral-800 py-8 text-white  ">
+        <h2 className="uppercase text-center text-4xl my-8 font-semibold">What I DO</h2>
         <motion.div
                               initial={{ opacity: 0, x: -300 }} 
                               whileInView={{ opacity: 1, x: 0 }}   
                               transition={{ duration: 1 }}  
-        className=" flex flex-row w-full md:w-4/6 m-auto md:text-lg">
+        className=" flex flex-col w-full gap-4 md:w-4/6 mb-6 mx-auto md:text-lg">
           
         <p className=" font-sans md:text-[16px] ">
         <span className="font-bold">Front-end Development:</span> 
@@ -125,11 +125,22 @@ function changeContact(e){
           initial={{ opacity: 0, x: -300 }} 
           whileInView={{ opacity: 1, x: 0 }}   
           transition={{ duration: 1.2 }}  
-          className=" flex flex-row w-full md:w-4/6 m-auto md:text-lg">
+          className=" flex flex-row w-full md:w-4/6 mb-6 mx-auto md:text-lg">
          
           <p className=" md:text-[16px] font-sans ">
             <span className="font-bold ">Back-end Development: </span> 
             {whatIdo.backend.paragraph}
+          </p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -300 }} 
+          whileInView={{ opacity: 1, x: 0 }}   
+          transition={{ duration: 1.2 }}  
+          className=" flex flex-row w-full md:w-4/6 mb-6 mx-auto md:text-lg">
+         
+          <p className=" md:text-[16px] font-sans ">
+            <span className="font-bold ">Android Development: </span> 
+            {whatIdo.android.paragraph}
           </p>
         </motion.div>
 
@@ -159,7 +170,7 @@ function changeContact(e){
               transition={{ duration: 1 }}  
               
         
-        className="grid grid-cols-1 grid-flow-row gap-3 p-8 md:p-4 md:grid-cols-3 w-screen min-h-fit  items-center justify-center ">
+        className="grid grid-cols-1 grid-flow-row gap-3 p-8 md:p-4 md:grid-cols-3 xl:grid-cols-4 w-screen min-h-fit  items-center justify-center ">
           {projectbutton}
 
         </motion.div>

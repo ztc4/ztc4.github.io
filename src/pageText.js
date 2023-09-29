@@ -36,5 +36,9 @@ export const whatIdo = {
         or mainly special libraries created by the community in this community. 
         When developing API,
         I always pay great attention to trying my best to limit the api calls clients will have to make, this applies to both front-end and back-end. In situation where users data is needed, I usually hash users passwords and use authentication tokens!`
+    },
+    android: {
+       
+        paragraph:` I understand the latest android development libaries and frameworks! I have an understand of making android application using Kotlin for the programming languages, Retrofit for the API calls, Room for data persistence or local database, JetPack Compose as the UI framework, and MVVM for the architecture! I am fairly new to this compared to my previous track with web development!`
     }
 }
