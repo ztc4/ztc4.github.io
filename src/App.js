@@ -185,7 +185,7 @@ function changeContact(e){
   <input type="email" className=" text-neutral-900 focus:shadow-black focus:shadow-md focus:outline-none focus:border-b-8 focus:border-sky-600 w-5/6 p-2 mb-6 md:w-3/6 rounded" placeholder="Email address" onChange={changeContact} value={contact.email} name="email" required></input>
   <textarea type="text" className=" text-neutral-900 focus:shadow-black focus:shadow-md focus:outline-none focus:border-b-8 focus:border-sky-600 h-48 w-5/6 tracking-wider  p-2 mb-6 md:w-3/6 rounded text-start" onChange={changeContact} value={contact.message} name="message" placeholder="Your Message" required></textarea>
   <div className="p-2 md:w-3/6 w-5/6">
-    <input type="submit" className="bg-sky-600 self-start w-24 font-medium tracking-tight rounded-full  p-2" value="Send" required></input>
+    <input type="submit" className="bg-sky-600 self-start w-24 font-medium tracking-tight rounded-full hover:cursor-pointer  p-2" value="Send" required></input>
   </div>
  
 </form>
