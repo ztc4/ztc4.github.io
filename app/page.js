@@ -7,7 +7,7 @@ export default function Home() {
     //Image && Navigation Section
 <div className="w-screen min-h-screen flex flex-col min-[400px]:px-10 md:px-20 lg:px-30 2xl:px-60 font-semibold p-4 py-12 text-stone-900 font-['Sloth'] bg-white">
   <div className="flex flex-row ">
-    <Image alt="An Image of Zachary" width={2000} height={2000} className=" w-40 h-40 min-[400px]:w-72 min-[400px]:h-72    lg:w-96 lg:h-96  rounded-tl-[50px] rounded-tr-lg rounded-bl-lg rounded-br-[50px] drop-shadow-2xl " src="/image-zachary.jpg" />
+    <Image alt="An Image of Zachary" width={2000} height={2000} className=" w-40 h-40 min-[400px]:w-72 min-[400px]:h-72    lg:w-96 lg:h-96  rounded-tl-[50px] rounded-tr-lg rounded-bl-lg rounded-br-[50px] drop-shadow-2xl " src="/image-1.webp" />
     <div className='ml-4 min-[500px]:ml-20 pt-4 md:gap-8 lg:gap-14 duration-500 flex flex-col'> 
       <div className='flex flex-row'>
         <Image alt="Arrow Pointing to the Page Your Own" className=' duration-1000' width={18} height={18} src="/arrow_forward_ios.svg" />
