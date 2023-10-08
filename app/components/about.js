@@ -22,21 +22,21 @@ function About() {
         { visible == true&& 
         <div className="font-normal flex flex-col gap-8 mt-8 text-center text-[#1C1B1F] ">
             <p>
-                I'm a Software Engineer stationed in Atlanta, Georgia with a profound fascination in the diverse applications of coding. 
-                Over the recent two years, I've dedicated significant hours to grasping and honing my programming skills, particularly focusing 
-                on web development and a bit of Android development. Concurrently, I've ensured to deepen my knowledge in the foundational concept
+                I’m a Software Engineer stationed in Atlanta, Georgia with a profound fascination in the diverse applications of coding. 
+                Over the recent two years, I’ve dedicated significant hours to grasping and honing my programming skills, particularly focusing 
+                on web development and a bit of Android development. Concurrently, I’ve ensured to deepen my knowledge in the foundational concept
                 s like algorithms, data structures, problem-solving techniques, and the creation of functional software solutions.
             </p>
             <p>
                 In the realm of web development, my expertise primarily lies in Javascript, both for the client and server sides. 
-                However, of late, I've been contemplating diving into SpringBoot with Kotlin. On the backend, my inclination is towards REST APIs,
-                 though I've had some exposure to GRAPHQL. My projects predominantly leverage the NoSQL database, MongoDB, where I feel most adept at query optimization and harnessing its advanced querying capabilities.
-                  On the frontend spectrum, I've been infusing more animations and embracing design strategies such as wireframing to craft superior applications. Tailwind CSS has been my go-to for translating wireframes to code, but I'm equally proficient with MaterialUI.
+                However, of late, I’ve been contemplating diving into SpringBoot with Kotlin. On the backend, my inclination is towards REST APIs,
+                 though I’ve had some exposure to GRAPHQL. My projects predominantly leverage the NoSQL database, MongoDB, where I feel most adept at query optimization and harnessing its advanced querying capabilities.
+                  On the frontend spectrum, I’ve been infusing more animations and embracing design strategies such as wireframing to craft superior applications. Tailwind CSS has been my go-to for translating wireframes to code, but I’m equally proficient with MaterialUI.
             </p>
             <p>
-                Recently, I've been refining my web-centric skills and seeking to broaden my grasp on tools frequently employed in professional environments. 
+                Recently, Ive been refining my web-centric skills and seeking to broaden my grasp on tools frequently employed in professional environments. 
                 Activities on my immediate agenda and those undertaken in the preceding days encompass getting acquainted with framer motion for animations, mastering the core concepts of SQL, and addressing any gaps in my understanding of Kotlin before embarking on Springboot.
-                 I'm currently open to exploring new opportunities. You can find my contact details below.
+                 I’m currently open to exploring new opportunities. You can find my contact details below.
             </p>
 
         </div>
