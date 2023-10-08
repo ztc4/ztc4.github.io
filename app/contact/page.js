@@ -3,10 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export const metadata = {
-    title: 'Contact Me',
-    description: 'Enter you email and information you want to ask me!',
-  }
+
 
 function Contact() {
 
