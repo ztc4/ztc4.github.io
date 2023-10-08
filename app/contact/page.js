@@ -1,5 +1,12 @@
 "use client"
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+
+export const metadata = {
+    title: 'Contact Me',
+    description: 'Enter you email and information you want to ask me!',
+  }
 
 function Contact() {
 
@@ -25,6 +32,9 @@ function changeContact(e){
             </form>
 
         </section>
+        <Link className="outline text-red-800 " href="/" passHref>
+            <Image alt="Back Button" width={10} height={10} src="/arrow_back_ios.svg" className="absolute left-0 top-0 h-10 w-10 md:h-16 md:w-16 m-4 ml-8   rounded-full cursor-pointer  "></Image>
+        </Link>
     </>
      );
 }

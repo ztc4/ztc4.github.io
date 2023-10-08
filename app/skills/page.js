@@ -3,6 +3,11 @@ import Link from 'next/link'
 import Skill from '../components/skill';
 import {frontend,backend,languages} from "./skills.data"
 
+export const metadata = {
+    title: 'Skills',
+    description: 'Zachary Coats Skills as an Web developer',
+  }
+
 function Skills() {
 
     function skillInfoConstructor(text,color,facing){
@@ -42,6 +47,9 @@ function Skills() {
     
 
   </div>
+  <Link className="outline text-red-800 " href="/" passHref>
+            <Image alt="Back Button" width={10} height={10} src="/arrow_back_ios.svg" className="absolute left-0 top-0 h-10 w-10 md:h-16 md:w-16 m-4 ml-8   rounded-full cursor-pointer  "></Image>
+    </Link>
 </div>
      );
 }

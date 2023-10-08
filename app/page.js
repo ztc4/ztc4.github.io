@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import About from './components/about'
 
 
 export default function Home() {
@@ -28,13 +29,7 @@ export default function Home() {
 
   </div>
 
-    <div className='flex flex-col items-center'>
-     
-      <div className=" text-lg ">ABOUT ME</div>
-      <div className=" font-normal text-center text-[#1C1B1F] ">I’m a 19 year old taught developer, looking for opportunities  to work in a environment that would allow me to experience many challenges and learn many things! I mainly have experience learning full stack web development, with some experience with android development. </div>
-      <Image alt="Click to Expand About me" className='mt-8 animate-bounce duration-1000' width={36} height={32} src="/expand_circle_down.svg" />
-
-    </div>
+  <About/>
 
 </div>
   )
