@@ -5,10 +5,10 @@ import Link from 'next/link';
 function Project({data}) {
     let {title,deployment,githubLink, images, figma} = data
     return ( 
-        <div className="w-72 h-52  md:w-96 md:h-96 bg-zinc-300 shadow">
+        <div className="w-72 h-72  md:w-96 md:h-96 bg-zinc-300 flex-nowrap cursor-pointer shadow hover:shadow-lg duration-500 hover:scale-105">
             <Image alt="project image" width={2400} height={2400} class="w-full h-4/6 object-cover" src={images[0] ?images[0] :  "/ecommerce-2.png"} />
-            <div className='w-full h-2/6 text-xl  flex flex-col items-center justify-center'>
-                <h4>{title}</h4>
+            <div className='w-full h-2/6 text-lg p-2  flex flex-col items-center justify-center'>
+                <h4 className='text-ellipsis'>{title}</h4>
                 <div className='flex flex-row gap-2 '>
                    {figma &&  
                    <Link  href={figma} passHref>

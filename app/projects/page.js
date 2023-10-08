@@ -8,7 +8,10 @@ function Projects() {
                 <h1 className=" text-stone-900 -mb-1 text-4xl md:text-5xl  lg:text-9xl font-semibold">Projects</h1> 
                 <h5 className=" text-[#727272] text-lg lg:text-4xl font-semibold">Click on Project to See More</h5>
             </div>
-            {projectsData.map((current,index)=> <Project key={index} data={current}/>)}
+            <div className=" justify-center flex flex-row gap-8 flex-wrap">
+                {projectsData.map((current,index)=> <Project key={index} data={current}/>)}
+            </div>
+            
         </div>
      );
 }

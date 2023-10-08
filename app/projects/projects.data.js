@@ -5,7 +5,7 @@ export const projectsData = [
       description: `This is an application that allows users to post, like, and search throught users articles. The users can then later even access these liked articles through the liked articles page, in the my profile section. Users can also subscribe to other users and have their articles pop up in the subscribed section page. All articles are allowed to have their own image, and multiply paragraphs. The user can choose to search for articles and users, filter throught liked articles, or even their own articles. `,
       issues:`test driven development was an issue, I wrote all my test but ended up rewriting them since I wanted to do things like change my data for better synchorinization with my database schema. I would say I failed planning out how my data was gonna work with my frontend. I also had many issues sizing the image, but later I was able to format them better.
        `,
-      images: [ "/ecommerce-2.png" ]
+      images: [ "/a-1.png","/a-2.png","/a-3.png","/a-4.png","/a-5.png" ]
        ,
       accomplishments: ["Successfully learned Next.js, fulfilling my initial goal.","Surprisingly mastered Tailwind CSS, despite initial reservations and considering it to look like gibberish."],
       githubLink: "https://github.com/ztc4/article-site",
@@ -29,7 +29,7 @@ export const projectsData = [
          This ended up with me not having an overarching state(redux,context) and instead making several extra api calls to my server and sending more data than it should be.
          I once messed up my project playing with TypeScript, so I had to find a git version that didn't mess up my deploy.
          `,
-        images: [],
+        images: ["/e-1.png","/ecommerce-2.png","/e-2.png","/e-3.png","/e-4.png",],
         accomplishments: [
             "The first accomplishment would most likely be learning Next.js, it was what I set off to do, so no surprise there.",
             "An unexpected accomplishment would be learning Tailwind. I made a mockery of it before, thinking it made the code look like gibberish.",
@@ -46,18 +46,13 @@ export const projectsData = [
       description: `I took an older project for an notes application, and recreated an new ui for it using the material ui application`,
       issues:` Fix alot of errors in the api I was using to not cause errors, and add a few more endpoints to make the site crash less 
        `,
-      images: [
-      {name: "Note Image", link: "../images/note1.png"},
-      {name: "Note Image", link: "../images/note3.png"},
-      {name: "Note Image", link: "../images/note$.png"},
-      {name: "Note Image", link: "../images/note5.png"},
-      {name: "Note Image", link: "../images/note6.png"},
-      {name: "Note Image", link: "../images/note7.png"}
+      images: [ "/n-1.png","/n-2.png","/n-3.png","/n-4.png","/n-5.png"
+
     
     ],
       accomplishments: [`Implement React Context to handle state`,"Fixed a few errors in my API and fixed the error I was making of sending status after res.json/send"],
       githubLink: "https://github.com/ztc4/note-task-frontend",
-      deployment: "note-task-frontend.vercel.app",
+      deployment: "https://note-task-frontend.vercel.app",
       figma: null
       
     
@@ -73,8 +68,7 @@ export const projectsData = [
       issues:` Issued understanding what I was implementing due to documentation; I was making it work but wasn't understanding whats an entity, or dao was, I struggled understanding these things connected.
        `,
       images: [
-      {name: "Contact List Image", link: "../images/contacts1.png"},
-      {name: "Contact List Image", link: "../images/contacts2.png"},
+
     
     
     ],
