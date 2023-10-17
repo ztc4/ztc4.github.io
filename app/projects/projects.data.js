@@ -1,16 +1,32 @@
 export const projectsData = [
+  {
+    title: "Zachary Coats Porfolio",
+    goals: ["Designing a site using figma and implementing it responsively","Further practice wireframing and mapping out websites","Further practice with Next.js not using the mistakes I previously used!"],
+    description: `My portfolio site, except using figma this time to allow for a better deisgn for desktop and mobile! `,
+    issues:`No issues, when making the site
+     `,
+    images: [ "/p-2.png","/p-1.png","/p-3.png","/p-4.png","/p-5.png" ]
+     ,
+    accomplishments: ["Wireframing and programming the site in one Day, or to be specific 12 hours"],
+    githubLink: "https://github.com/ztc4/ztc4.github.io",
+    deployment: "https://ztc4-github-io.vercel.app/",
+    figma: "https://www.figma.com/file/L4BYc2wn8SjCwJAzm0gXAq/PORTFOLIO-DESIGN-WEB-PAGE?type=design&node-id=0-1&mode=design&t=WvWZbus4EZDAYPth-0",
+    techstack:["Javascript","Next.js","React","Tailwind CSS"]
+
+},
     {
-      title: "Article Site",
+      title: "ArticleCraft, a site for sharing articles",
       goals: ["Learning how to correctly write unit test","learn how to send images between the client and server side","Learning how figma works by wireframing the project."],
       description: `This is an application that allows users to post, like, and search throught users articles. The users can then later even access these liked articles through the liked articles page, in the my profile section. Users can also subscribe to other users and have their articles pop up in the subscribed section page. All articles are allowed to have their own image, and multiply paragraphs. The user can choose to search for articles and users, filter throught liked articles, or even their own articles. `,
-      issues:`test driven development was an issue, I wrote all my test but ended up rewriting them since I wanted to do things like change my data for better synchorinization with my database schema. I would say I failed planning out how my data was gonna work with my frontend. I also had many issues sizing the image, but later I was able to format them better.
+      issues:`Test driven development was an issue, I wrote all my test but ended up rewriting them since I wanted to do things like change my data for better synchronization with my database schema. I would say I failed planning out how my data was gonna work with my frontend. I also had many issues sizing the image, but later I was able to format them better. There were also many challenges with the deployment on the backend, I had trouble getting the aws lambda server to send images to the frontend, the data kept getting corrupted and that is something I still can't figure out the errors for!
        `,
       images: [ "/a-1.png","/a-2.png","/a-3.png","/a-4.png","/a-5.png" ]
        ,
-      accomplishments: ["Successfully learned Next.js, fulfilling my initial goal.","Surprisingly mastered Tailwind CSS, despite initial reservations and considering it to look like gibberish."],
+      accomplishments: ["Writing basic unit test","How to better optimize database queries and Fetches, allowing for less data used!","Learned the basics of wireframing with figma, allowing me to make better designs and speed up development!","Due to errors made in structure in frontend architecture, I learned what not to try again next time when structuring the pages and components!"],
       githubLink: "https://github.com/ztc4/article-site",
       deployment: "https://article-site-ztc4.vercel.app/",
-      figma: "https://www.figma.com/file/mjkmQIBiVHFlPSasqSnOMw/article?type=design&node-id=0-1&mode=design&t=tFWjTkFin2PkxHy4-0"
+      figma: "https://www.figma.com/file/mjkmQIBiVHFlPSasqSnOMw/article?type=design&node-id=0-1&mode=design&t=tFWjTkFin2PkxHy4-0",
+      techstack:["Javascript","Next.js","React","Tailwind CSS","Express.js","Node.js"]
   
   },
 
@@ -33,15 +49,17 @@ export const projectsData = [
         accomplishments: [
             "The first accomplishment would most likely be learning Next.js, it was what I set off to do, so no surprise there.",
             "An unexpected accomplishment would be learning Tailwind. I made a mockery of it before, thinking it made the code look like gibberish.",
-            "Now, I'm contemplating remaking this very portfolio site using Tailwind and my 500+ lines of css for this site look like garbage in comparison."
+            "Using my first api  that I didn't create, the stripe payment API"
+      
           ],
         githubLink: "https://github.com/ztc4/Ecommerce-Nextjs",
         deployment: "https://ecommerce-nextjs-xi-nine.vercel.app/",
-        figma:null
+        figma:null,
+        techstack:["Javascript","stripe-api","Next.js","React","Tailwind CSS","Express.js","Node.js"]
     
     },
     {
-      title: "Material UI Notes ",
+      title: "Notes, tracking and sharing notes",
       goals: [`Learn to create websites using material UI`,"do a little bit of refactoring of older code"],
       description: `I took an older project for an notes application, and recreated an new ui for it using the material ui application`,
       issues:` Fix alot of errors in the api I was using to not cause errors, and add a few more endpoints to make the site crash less 
@@ -53,7 +71,8 @@ export const projectsData = [
       accomplishments: [`Implement React Context to handle state`,"Fixed a few errors in my API and fixed the error I was making of sending status after res.json/send"],
       githubLink: "https://github.com/ztc4/note-task-frontend",
       deployment: "https://note-task-frontend.vercel.app",
-      figma: null
+      figma: null,
+      techstack:["Javascript","Next.js","React","MaterialUI","Express.js","Node.js","Mongoose/Mongodb"]
       
     
     },
@@ -79,7 +98,8 @@ export const projectsData = [
       ],
       githubLink: "https://github.com/ztc4/Contact-List-Kotlin",
       deployment:null,
-      figma: null
+      figma: null,
+      techstack:["KOTLIN","ANDROID STUDIO","JETPACK COMPOSE","SQLLITE"]
     
     },
 

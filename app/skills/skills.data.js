@@ -9,7 +9,7 @@ export const languages = [
       {
         color:"red",
         name: "Kotlin",
-        description: `I learned this language for development in Android Applications`
+        description: `I learned this language for development in Android Applications,I've gotten better at it recently due to learning springboot with it allowing more opportunities to use just kotlin. I understand coroutines, map and sets but still trip up on syntax sometimes!`
       },
     {
       color:"red",
@@ -41,7 +41,17 @@ export const frontend = [
   {
       
     name: "Compose",
-    description: `This is the main library used when created M  obile Applications. Learned it mainly because it's what used when learning android development through Google Android development course.`
+    description: `This is the main library used when created Mobile Applications. Learned it mainly because it's what used when learning android development through Google Android development course.`
+  },
+  {
+      
+    name: "MaterialUI",
+    description: `Mainly used when recreating the ui for my first project, the notes application, feel comfortable with it due to similar principles as Compsoe`
+  },
+  {
+      
+    name: "Cypress",
+    description: `This is the main testing library that comes with next.js application so I learned it. I previous knew testing with react and jest, but I understand basic syntax for this also. I have experience using this for test driven development in my article craft project`
   },
 ]
 
@@ -59,6 +69,22 @@ export const backend = [
     name: "MongoDB",
     description: "This my go to for database, especially because I can easily set up an database on the cloud with mongo atlas. I personally like to use the mongoose framework , and haven't used just regular mongodb in months. I can connect documents and even add subdocuments with ease."
   },
+  {
+    name: "MySQL",
+    description: "I recently learned this due to working with springboot and some due to android data persistence library ROOM. I can understand the queries and how to connect difference schema building complex data."
+  },
+
+]
+
+export const other = [
+  {
+        name: "Git",
+      description: " I know how to branch off my work, add,commit and push to github. Not much to put here "
+    },
+      {
+      name: "Figma",
+      description: " I  have learned wireframing using figma, and turning that wireframe into a real-world project "
+    }
 
 ]
   //   {

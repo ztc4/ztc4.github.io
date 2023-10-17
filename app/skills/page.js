@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Skill from '../components/skill';
-import {frontend,backend,languages} from "./skills.data"
+import {frontend,backend,languages, other} from "./skills.data"
 
 export const metadata = {
     title: 'Skills',
@@ -42,12 +42,16 @@ function Skills() {
     <div className='flex flex-row flex-wrap gap-1 md:gap-4 left-0  w-full'>
         {backend.map(language => <Skill color="blue" text={language.description} name={language.name} key={language.name}/>)}
     </div>
+    <h3 className=" text-stone-900 text-lg lg:text-4xl font-semibold"><span>Other </span>Tools</h3>
+    <div className='flex flex-row flex-wrap gap-1 md:gap-4 left-0  w-full'>
+        {other.map(language => <Skill color="blue" text={language.description} name={language.name} key={language.name}/>)}
+    </div>
     <p className='text-[#727272]'>Skills are ranked in order of proficiency and experience</p>
 
     
 
   </div>
-  <Link className="outline text-red-800 " href="/" passHref>
+  <Link className=" text-red-800 " href="/" passHref>
             <Image alt="Back Button" width={10} height={10} src="/arrow_back_ios.svg" className="absolute left-0 top-0 h-10 w-10 md:h-16 md:w-16 m-4 ml-8   rounded-full cursor-pointer  "></Image>
     </Link>
 </div>

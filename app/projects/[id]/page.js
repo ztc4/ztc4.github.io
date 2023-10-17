@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { projectsData } from "../projects.data";
 import Link from "next/link";
+import ProjectImage from "@/app/components/projectImage";
 
 function ProjectPage(props) {
 
@@ -23,14 +24,8 @@ function ProjectPage(props) {
     return ( 
         <>
             <div className="w-screen overflow-x-hidden min-h-screen  flex flex-col font-semibold  text-stone-900 font-['Sloth'] bg-white">
-                <div className="min-[400px]:px-10 md:px-20 lg:px-30 2xl:px-60 font-semibold   bg-gray-200">
-                    <Image alt="project image" width={2400} height={2400} className="w-full object-cover" src={project.images[0] ?project.images[0] :  "/ecommerce-2.png"} />
-                    <Link className="outline " href="/projects" passHref>
-                        <Image alt="Back Button" width={10} height={10} src="/arrow_back_ios.svg" className="absolute left-0 top-0 h-10 w-10 md:h-16 md:w-16 m-4  rounded-full cursor-pointer  "></Image>
-                    </Link>
-                    
+                <ProjectImage project={project}/>
 
-                </div>
                 
                 <div className='flex-col items-left flex px-4 min-[400px]:px-10 md:px-20 lg:px-30 2xl:px-60  mb-12 gap-6 '>
                     {/* <h1 className=" text-stone-900 -mb-1 text-4xl md:text-5xl  lg:text-9xl font-semibold">Projects</h1>  */}
