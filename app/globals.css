@@ -16,7 +16,7 @@
   }
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +24,27 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+@font-face {
+  font-family: "sloth-semibold";
+  src: url("../public/Sloth-SemiBold.ttf");
 }
+@font-face {
+  font-family: "sloth-regular";
+  src: url("../public/Sloth-Regular.ttf");
+}
+@font-face {
+  font-family: "sloth-light";
+  src: url("../public/Sloth-Light.ttf");
+}
+
+.carousel .slide {
+  margin: 0 10px; /* Adjust the margin as needed */
+}
+
+/* If you have a specific class for each item, you can target it directly */
+.carousel-item-class {
+  margin: 0 10px; /* Adjust the margin as needed */
+}
+

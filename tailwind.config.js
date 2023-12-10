@@ -14,8 +14,20 @@ module.exports = {
       },
       colors:{
         "pink":"#EFD4FF",
-        "red":"FF4654"
-      }
+        "red":"#FF4654",
+        "dark":"#333333"
+      },
+      fontFamily:{
+        "sloth-regular":["sloth-regular"],
+        "sloth-semibold":["sloth-semibold"],
+        "sloth-light":"sloth-light"
+      },
+      fontSize: {
+        "hl": "4.625rem", // 74px
+        "hs": "2.5rem",   // 40px
+        "ps": "0.75rem",  // 12px
+        "pl": "1.375rem"  // 22px
+      }, 
     },
   },
   plugins: [],

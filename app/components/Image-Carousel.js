@@ -20,9 +20,9 @@ const ImageCarousel = ({ images }) => {
         }
         >
             {images.map((image, index) => (
-                <div key={index}>
+                <div key={index} className='m-8'>
                     {/* <img src={image} alt={`Slide ${index}`} /> */}
-                    <div className='h-40 w-full bg-pink z-20'>
+                    <div className='h-72 rounded-2xl w-full bg-pink z-20'>
                         <p>{index}</p>
 
                     </div>
