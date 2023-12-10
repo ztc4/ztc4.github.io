@@ -40,7 +40,7 @@ function ProjectPage(props) {
                             <Image alt="Deployment Link" width={40} height={40} className="hover:scale-110" src="/Vector-1.svg" />
                         </Link >}
                         <Link href={githubLink} passHref>
-                            <Image alt="project image" width={40} height={40} className="hover:scale-110" src="/Vector.svg" />
+                            <Image alt="project image" width={40} height={40} className="hover:scale-110" src="/github.svg" />
                         </Link>
 
                     </div>
