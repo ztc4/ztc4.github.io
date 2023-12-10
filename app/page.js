@@ -1,9 +1,19 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
 import About from './components/about'
-
+import ImageCarousel from './components/Image-Carousel'
 
 export default function Home() {
+
+  const images = [
+    'url-to-your-first-image.jpg',
+    'url-to-your-second-image.jpg',
+    'hello',
+    "red",
+    "four"
+    // ... more images
+];
   return (
     //Image && Navigation Section
 <div className="w-screen min-h-screen flex flex-col min-[400px]:px-10 md:px-20 lg:px-30 2xl:px-60 font-semibold p-4 py-12 text-stone-900 font-['Sloth'] bg-white">
@@ -28,6 +38,11 @@ export default function Home() {
     
 
   </div>
+  {/* <div className='relative'>
+    <ImageCarousel images={images} />;
+  </div> */}
+  
+  
 
   <About/>
 
