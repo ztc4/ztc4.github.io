@@ -27,7 +27,7 @@ function Skills() {
                 mistakes with architecture and design problems in my applications! 
     </div>
     <h3 className=" text-stone-900 text-lg lg:text-4xl font-semibold"><span>Programming </span>Languages</h3>
-    <div className='flex flex-row flex-wrap gap-1 md:gap-4 left-0  w-full'>
+    <div className='flex flex-row  flex-wrap gap-1 md:gap-4 left-0  w-full'>
         {languages.map(language => <Skill color="red" text={language.description} name={language.name} key={language.name}/>)}
 
     </div>
@@ -51,9 +51,10 @@ function Skills() {
     
 
   </div>
-  <Link className=" text-red-800 " href="/" passHref>
-            <Image alt="Back Button" width={10} height={10} src="/arrow_back_ios.svg" className="absolute left-0 top-0 h-10 w-10 md:h-16 md:w-16 m-4 ml-8   rounded-full cursor-pointer  "></Image>
-    </Link>
+  <Link className=" absolute left-0 top-0 items-center hover:text-red flex flex-row-reverse" href="/" passHref>
+                <p className=" text-pl">Back to the Previous Page</p>
+                <Image alt="Back Button" width={10} height={10} src="/arrow_back_ios.svg" className="h-10  w-10 md:h-16 md:w-16 m-4 ml-8  rounded-full cursor-pointer  "></Image>
+        </Link>
 </div>
      );
 }

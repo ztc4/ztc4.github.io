@@ -3,33 +3,56 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Button from './components/button';
 import ImageCarousel from './components/Image-Carousel'
+import {motion} from "framer-motion"
 
 function LandingPage() {
     const images = [
-        'url-to-your-first-image.jpg',
-        'url-to-your-second-image.jpg',
-        'hello',
-        "red",
-        "four"
-        // ... more images
+        {image:"/image-1.svg",project:"2"},{image:"/image-2.svg",project:"3"},{ image:"/image-3.svg",  project:"1"},
     ];
+
+    const item = {hidden: { y: 40, opacity: 0.3},visible: {y: 0, opacity: 1 },time:{ delay:0, duration:0.6} };
+    const icon = { hover:{scale:1.05,rotate: 350}}
+
+
+
     return ( 
-        <div className="bg-white m-0 p-0  font-sloth-light font-ps md:font-pl md:font-sloth-regular text-dark">
+        <div className="bg-white m-0 p-0  font-sloth-light font-ps md:font-pl md:font-sloth-regular text-dark overflow-x-hidden">
             <section id="ABOUT" className=' relative min-h-screen w-screen md:flex  md:gap-10 md:flex-row-reverse  px-4 md:px-32 py-8'>
                 <Image alt="An Image of Zachary" width={2000} height={2000} className=" w-full h-60 min-[400px]:w-72 min-[400px]:h-72 brightness-50   lg:w-96 lg:h-full  rounded-tl-[50px] rounded-tr-lg rounded-bl-lg rounded-br-[50px]  " src="/image-1.webp" />
                 <div className=' md:h-full  md:p-4'>
-                    <h1 className='text-hs md:text-hl font-sloth-semibold'>Zachary Coats</h1>
+                    <motion.h1 
+                    
+                    whileInView="visible"
+                    initial="hidden"
+                    transition="time"
+                    variants={item}
+                    className='text-hs md:text-hl font-sloth-semibold'>Zachary Coats</motion.h1>
                     <h4 className=' -mt-2'>Junior Software Engineer</h4>
                     <div className='flex relative items-center justify-center md:justify-start mt-3 md:mt-6  w-full left-0'>
                         <div className='bg-red h-2 w-1/5 md:hidden mr-auto'/>
-                        <Link className="" href="/" passHref>
-                            <Image alt="Linkedin icon" width={10} height={10} src="/linkedin.svg" className="h-10 w-10   cursor-pointer  "></Image>
+                        <Link className="" href="https://www.linkedin.com/in/zachary-coats-651211270/" passHref>
+                            <motion.div
+                            whileHover="hover"
+                            variants={icon}
+                            >
+                                <Image alt="Linkedin icon" width={10} height={10} src="/linkedin.svg" className="h-10 w-10   cursor-pointer  "></Image>
+                            </motion.div>
+                            
                         </Link>
-                        <Link className="" href="/" passHref>
-                            <Image alt="EMAIL Icon" width={10} height={10} src="/mail.svg" className=" h-10 w-10    cursor-pointer  "></Image>
+                        <Link className="" href="mailto:zachary4coats@gmail.com?subject=Email Subject&body=Hello, I would like to discuss..." passHref>
+                            <motion.div
+                            whileHover="hover"
+                            variants={icon}
+                            >
+                                <Image alt="EMAIL Icon" width={10} height={10} src="/mail.svg" className=" h-10 w-10    cursor-pointer  "/>
+                            </motion.div>
                         </Link>
-                        <Link className="" href="/" passHref>
-                            <Image alt="Click to go to Github" width={10} height={10} src="/github.svg" className=" h-10 w-10  cursor-pointer  "></Image>
+                        <Link className="" href="https://github.com/ztc4" passHref>
+                            <motion.div
+                            whileHover="hover"
+                            variants={icon}>
+                                <Image alt="Click to go to Github" width={10} height={10} src="/github.svg" className=" h-10 w-10  cursor-pointer  "/>
+                            </motion.div>
                         </Link>
                         <div className='bg-red h-2 w-1/5 md:hidden ml-auto'/>
                     </div>
@@ -50,7 +73,12 @@ function LandingPage() {
 
             </section>
             <section id="TECH" className=' min-h-screen w-screen  relative  md:px-32   px-4 py-8'>
-                <h1 className='text-hs md:text-hl text-center md:text-left font-sloth-semibold tex'>Tech Stack</h1>
+                <motion.h1 
+                    whileInView="visible"
+                    initial="hidden"
+                    transition="time"
+                    variants={item}
+                className='text-hs md:text-hl text-center md:text-left font-sloth-semibold tex'>Tech Stack</motion.h1>
                 <div className='w-full  md:w-4/5 '>  
                     <div className='w-full h-44 md:h- bg-red'>
 
@@ -76,7 +104,12 @@ function LandingPage() {
             </section>
             <section id="PROJECTS" className='h-screen    px-4 py-8 md:justify-center md:py-20 md:px-32 flex-col md:flex-row flex w-screen'>
                 <div className=' md:flex md:flex-col md:justify-center  md:w-1/2 '>
-                    <h1 className='text-hs md:text-hl  font-sloth-semibold '>PROJECTS</h1>
+                    <motion.h1 
+                        whileInView="visible"
+                        initial="hidden"
+                        transition="time"
+                        variants={item}
+                    className='text-hs md:text-hl  font-sloth-semibold '>PROJECTS</motion.h1>
                     <p>Take a look at the projects I have, some of worked on before. See how I progressed as a developer, gained skills and learned from mistakes! Click the button to see my projects.  There you will be able to see the goals, issues and accomplishments of each of projects allowing you to picture me as a developer. Also there you can potentially view the live site, check out the Github repository or look at the initial Figma design I came up with!</p>
                     <div className=' bg-black my-4 md:my-8 h-fit w-fit '>
                         <Link href="projects">
@@ -89,7 +122,12 @@ function LandingPage() {
                 </div>
             </section>
             <section id="BLOG" className='h-screen    px-4 py-20 md:px-32 w-screen'>
-                <h1 className='text-hs md:text-hl  font-sloth-semibold '>Blog</h1>
+                <motion.h1 
+                 whileInView="visible"
+                 initial="hidden"
+                 transition="time"
+                variants={item}
+                className='text-hs md:text-hl  font-sloth-semibold '>Blog</motion.h1>
                 <p>{`Some of the articles I've wrote on the site ARTICLE CRAFT which was created sololy by me. Their mostly technical works meant to show my experience or understanding of a technology!`}</p>
                 <p className='font-sloth-semibold mt-12 md:text-xl '>Click to visit the blog</p>
                 <div className='flex flex-row gap-8  mt-2  md:p-2  overflow-x-scroll'>

@@ -14,7 +14,7 @@ module.exports = {
       },
       colors:{
         "pink":"#EFD4FF",
-        "red":"#FF4654",
+        "red":"#244CB4",
         "dark":"#333333"
       },
       fontFamily:{

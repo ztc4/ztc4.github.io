@@ -48,3 +48,28 @@
   margin: 0 10px; /* Adjust the margin as needed */
 }
 
+/* Styles the scrollbar track (the background) */
+::-webkit-scrollbar-track {
+  background-color: #f4f4f4; /* Light grey track */
+  border-radius: 10px;
+}
+
+/* Styles the scrollbar thumb (the moving part) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Darker grey thumb */
+  border-radius: 10px;
+  border: 3px solid #f4f4f4; /* Creates a little space between track and thumb */
+}
+
+/* Changes the thumb color when hovered or clicked */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Even darker grey on hover */
+}
+
+/* Styles the scrollbar itself (width, height) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the vertical scrollbar */
+  height: 12px; /* Height of the horizontal scrollbar */
+}
+
+/* ,"#FF4654"] */

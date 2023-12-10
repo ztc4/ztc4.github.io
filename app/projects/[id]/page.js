@@ -24,7 +24,10 @@ function ProjectPage(props) {
     return ( 
         <>
             <div className="w-screen overflow-x-hidden min-h-screen  flex flex-col font-semibold  text-stone-900 font-['Sloth'] bg-white">
-                <ProjectImage project={project}/>
+                <div className="h-1/2 bg-pink">   
+                    <ProjectImage project={project}/>
+                </div>
+                
 
                 
                 <div className='flex-col items-left flex px-4 min-[400px]:px-10 md:px-20 lg:px-30 2xl:px-60  mb-12 gap-6 '>
