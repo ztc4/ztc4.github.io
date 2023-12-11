@@ -35,10 +35,10 @@ function changeContact(e){
 
         </section>
         {/* Back BUTTON */}
-        <Link className=" absolute left-0 top-0 items-center  flex flex-row-reverse" href="/" passHref>
-                <p className=" text-pl">Back to the Previous Page</p>
+        <Link className=" absolute left-0 top-2 md:top-0 items-center  flex flex-row-reverse" href="/" passHref>
+                <p className="hidden md:block text-pl">Back to the Previous Page</p>
                 <Image alt="Back Button" width={10} height={10} src="/arrow_back_ios.svg" className="h-10  w-10 md:h-16 md:w-16 m-4 ml-8  rounded-full cursor-pointer  "></Image>
-        </Link>
+            </Link>
     </>
      );
 }
