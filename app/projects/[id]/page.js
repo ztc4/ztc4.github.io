@@ -40,7 +40,7 @@ function ProjectPage(props) {
                         </Link>}
                         {deployment && 
                         <Link  href={deployment} passHref>
-                            <Image alt="Deployment Link" width={40} height={40} className="hover:scale-110" src="/Vector-1.svg" />
+                            <Image alt="Deployment Link" width={40} height={40} className="hover:scale-110" src="/Web.svg" />
                         </Link >}
                         <Link href={githubLink} passHref>
                             <Image alt="project image" width={40} height={40} className="hover:scale-110" src="/github.svg" />

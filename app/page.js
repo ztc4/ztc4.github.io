@@ -76,10 +76,10 @@ async function LandingPage() {
                     <h3 className='font-sloth-semibold text-center md:mt-4'>FULL STACK DEVELOPER | WEB DEVELOPER | REACT DEVELOPER </h3>
                     <div id="Tech-Icons" className="[&>*]:p-2 flex justify-center   md:absolute md:right-32  md:flex-col top-20    [&>*]:cursor-pointer [&>*]:md:h-16 [&>*]:md:w-16 [&>*]:w-10 [&>*]:h-10">
                         <Image alt="Github icons" width={30} height={30} src="/node.svg" className='' />
-                        <Image alt="React icons" width={30} height={30} src="/react.svg" />
+                        <Image alt="React icons" width={30} height={30} src="/React.svg" />
                         <Image alt="Vue icons" width={30} height={30} src="/vuejs.svg" />
                         <Image alt="Kotlin icon" width={30} height={30} src="/Kotlin.svg" />
-                        <Image alt="Javascript icon" width={30} height={30} src="/javascript.svg" />
+                        <Image alt="Javascript icon" width={30} height={30} src="/Javascript.svg" />
 
                     </div>
                     <p className=' md:mt-8 '>As a full stack developer, I have a variety of skills. I have understanding of two frontend frameworks React and Vue; along with technologies that  includes them line next.js and nuxt.js! I also have great ability in backend development, specifically in express.js and springboot, with ability to build REST APIS in both, and use NoSql(Mongodb) and SQL databases! With many projects, and freelance work, you can be confident your getting a developer that knows how to communicate, motivated to take on challenges and progress as developer </p>
