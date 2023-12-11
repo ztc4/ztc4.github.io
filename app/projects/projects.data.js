@@ -19,7 +19,7 @@ export const projectsData = [
     title: "Business Chatbot",
     goals: ["Learning about Vue and its ecosystem"," Make my first Large Spring Boot application","Make a ai chatbot for a personal business","Text to image, to alllow easy input of data using images"],
     description: `This is an application meant to allow a business to input data into a file through prompts, the user can add their own text, or take text off an image using endpoint that utilized tesseract, this data then will be used for a personal chatbot`,
-    issues:`Lot of syntax errors since I;m new to spring boot`,
+    issues:`Lot of syntax errors since I'm new to spring boot`,
     images: [ "/asc-1.svg","/asc-2.svg"]
      ,
     accomplishments: ["Made better Animations","Learned Nuxt.js and Vue.js","Gained some proficiency with Spring boot using Kotlin","Learned a little about OCR","Came up with creaive solutions to my problems"],

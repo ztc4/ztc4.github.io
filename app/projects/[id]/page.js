@@ -42,9 +42,9 @@ function ProjectPage(props) {
                         <Link  href={deployment} passHref>
                             <Image alt="Deployment Link" width={40} height={40} className="hover:scale-110" src="/Web.svg" />
                         </Link >}
-                        <Link href={githubLink} passHref>
+                        {githubLink && <Link href={githubLink} passHref>
                             <Image alt="project image" width={40} height={40} className="hover:scale-110" src="/github.svg" />
-                        </Link>
+                        </Link>}
 
                     </div>
                     <h4 className="text-lg lg:text-4xl font-semibold ">Description</h4>
