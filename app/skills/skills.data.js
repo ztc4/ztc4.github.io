@@ -83,7 +83,10 @@ export const other = [
     },
       {
       name: "Figma",
-      description: " I  have learned wireframing using figma, and turning that wireframe into a real-world project "
+      description: " I have learned wireframing using figma, and turning that wireframe into a real-world project "
+    },{
+      name: "AWS",
+      description:""
     }
 
 ]

@@ -4,7 +4,7 @@ function Resume() {
         <div className="bg-red w-screen h-screen m-0">
                     <iframe 
             className=" h-full w-full "
-            src="/Resume-2.pdf" 
+            src="/Resume.pdf" 
             
             title="PDF Viewer"/>
 

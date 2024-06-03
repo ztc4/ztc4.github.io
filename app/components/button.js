@@ -1,6 +1,6 @@
 function Button({text,type = "button"}) {
     return ( 
-        <div className='h-14 group w-48 relative'>
+        <div className='h-14 group w-40 md:w-48 relative'>
             <button type={type} className='bg-red text-white border-2 border-black z-10 absolute left-0 top-0 h-14 w-full'>
                 {text}
             </button>
