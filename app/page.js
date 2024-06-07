@@ -111,7 +111,7 @@ async function LandingPage() {
                 <p>{`Some of the articles I've wrote on the site ARTICLE CRAFT which was created sololy by me. Their mostly technical works meant to show my experience or understanding of a technology!`}</p>
                 <p className='font-sloth-semibold mt-12 text-lg md:text-xl '>Click to visit the blog</p>
                 <div className='flex flex-row gap-8  mt-2 h-96 md:p-2  overflow-x-scroll'>
-                    {/* <Blog data={data}/> */}
+                    <Blog data={data}/>
 
                     
 

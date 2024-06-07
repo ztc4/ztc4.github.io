@@ -10,7 +10,9 @@ export const projectsData = [
     issues: `
      `,
     images: [
-      "/po-1.svg"
+      "/streaming1.svg",
+      "/streaming2.svg",
+      "/streaming3.svg"
 
     ],
     accomplishments: [
