@@ -2,7 +2,7 @@
 import {motion} from "framer-motion"
 
 
-function AnimatedText({text}) {
+function AnimatedText({text, color}) {
 
     const item = {hidden: { y: 40, opacity: 0.3},visible: {y: 0, opacity: 1 },time:{ delay:0, duration:0.6} };
     
@@ -13,7 +13,7 @@ function AnimatedText({text}) {
         initial="hidden"
         transition="time"
         variants={item}
-        className='text-hs md:text-hl font-sloth-semibold'>{text}</motion.h1>
+        className={`text-hs md:text-hl font-sloth-semibold ${ color && "text-[#FF4654]"}`}>{text}</motion.h1>
      );
 }
 

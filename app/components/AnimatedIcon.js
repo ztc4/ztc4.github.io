@@ -12,7 +12,7 @@ function AnimatedIcon({src}) {
         whileHover="hover"
         variants={icon}
         >
-            <Image alt="Linkedin icon" width={10} height={10} src={src} className="h-10 w-10   cursor-pointer  "></Image>
+            <Image alt="Linkedin icon" width={10} height={10} src={src} className="h-10 w-10 cursor-pointer  "></Image>
         </motion.div>
      );
 }
