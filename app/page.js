@@ -42,57 +42,44 @@ async function LandingPage() {
           className="h-4/5 w-20 my-auto object-cover "
           src="/version-4/name.svg"
         />
-        
-        <div className="w-2/4">
-        {/* <h1 className=" whitespace-nowrap  opacity-0  absolute left-0  text-hs md:text-hl text-white font-sloth-semibold ">Zachary Coats</h1> */}
-          <h4 className=" text-[#FF4654] text-hs  font-sloth-semibold">Fullstack Software Engineer</h4>
-          <p className=" text-lg  text-white ">
-            {` I'm a Software Engineer stationed in Atlanta, Georgia with a profound fascination in the diverse applications of coding. Over the recent two years, I’ve dedicated significant hours to grasping and honing my programming skills, particularly focusing on web development. Lately, I've been deepening my knowledge in concepts like algorithms, data structures, problem-solving techniques, and software architecture.`}
-          </p>
-        </div>
-        {/* <Image
-          alt="An Image of Zachary"
-          width={1908}
-          height={3392}
-          className=" object-cover object-center w-full h-72 md:w-72 md:h-72 brightness-90  lg:w-96 lg:h-full  rounded-tl-[50px] rounded-tr-lg rounded-bl-lg rounded-br-[50px]  "
-          src="/personalpic2web.webp"
-        />
-        <div className=" md:h-full  md:p-4">
-          <AnimatedText text="Zachary Coats" />
-          <h4 className=" -mt-2">Junior Software Engineer</h4>
-          <div className="flex relative items-center gap-2 justify-center md:justify-start my-6 md:mt-6  w-full left-0">
-            <div className="bg-red h-2 w-1/5 md:hidden mr-auto" />
+
+        <div className=" w-full md:w-2/4 h-screen flex justify-center md:justify-end py-10 px-2 pr-4 md:px-8 gap-8 flex-col">
+          {/* <h1 className=" whitespace-nowrap  opacity-0  absolute left-0  text-hs md:text-hl text-white font-sloth-semibold ">Zachary Coats</h1> */}
+          <div>
+            <h4 className=" text-[#FF4654] text-xl md:text-hs  mb-3 font-sloth-semibold">
+              Fullstack Software Engineer
+            </h4>
+            <p className=" md:text-lg font-sloth-semibold  text-white ">
+              {` I'm a Software Engineer stationed in Atlanta, Georgia with a profound fascination in the diverse applications of coding. Over the recent two years, I’ve dedicated significant hours to grasping and honing my programming skills, particularly focusing on web development. Lately, I've been deepening my knowledge in concepts like algorithms, data structures, problem-solving techniques, and software architecture.`}
+            </p>
+          </div>
+          <div className=" flex flex-row gap-3">
             <Link
               className=""
               href="https://www.linkedin.com/in/zachary-coats-651211270/"
               passHref
             >
-              <AnimatedIcon src="/linkedin.svg" />
+              <AnimatedIcon src="/version-4/link-red.svg" />
             </Link>
             <Link
               className=""
               href="mailto:zachary4coats@gmail.com?subject=Email Subject&body=Hello, I would like to discuss..."
               passHref
             >
-              <AnimatedIcon src="/mail.svg" />
+              <AnimatedIcon src="/version-4/mail-red.svg" />
             </Link>
             <Link className="" href="https://github.com/ztc4" passHref>
-              <AnimatedIcon src="/github.svg" />
-            </Link>
-            <div className="bg-red h-2 w-1/5 md:hidden ml-auto" />
-          </div>
-          <p className="my-6 text-lg ">
-            {` I'm a Software Engineer stationed in Atlanta, Georgia with a profound fascination in the diverse applications of coding. Over the recent two years, I’ve dedicated significant hours to grasping and honing my programming skills, particularly focusing on web development. Lately, I've been deepening my knowledge in concepts like algorithms, data structures, problem-solving techniques, and software architecture.`}
-          </p>
-          <div className="flex flex-row gap-4 md:flex-row justify-center mt-4 md:my-16 md:justify-start mx-6 items-center">
-            <Link href="contact">
-              <Button text="CONTACT ME" />
-            </Link>
-            <Link href="resume">
-              <Button text="RESUME" />
+              <AnimatedIcon src="/version-4/git-red.svg" />
             </Link>
           </div>
-        </div> */}
+
+          <div className="w-full md:w-4/5 h-1/4 md:h-1/2 grid grid-cols-1 md:grid-cols-2 [&>*:hover]:text-xl [&>*:hover]:bg-rose-600 [&>*:hover]:duration-700 [&>*]:flex [&>*]:justify-center [&>*]:items-center [&>*]:uppercase font-sloth-semibold text-white [&>*]:bg-rose-700 gap-1">
+            <Link href="resume"> Resume</Link>
+            <Link href="projects">Projects</Link>
+            <Link href="skills">Skills</Link>
+            <Link href="contact">Contact</Link>
+          </div>
+        </div>
       </section>
       <section
         id="WORK EXPERIENCE"
@@ -100,7 +87,7 @@ async function LandingPage() {
       >
         <div className=" md:flex md:flex-col md:justify-start md:px-4 py-10   min-h-full  md:w-1/2 ">
           <AnimatedText text="Work Experience" color="red" />
-          <p className="text-lg text-white">
+          <p className="md:text-lg font-sloth-semibold  text-white ">
             So current I have about 1+ year of experience working in the full
             stack development field. I initially started of gaining experience
             with being a freelance developer doing simple bug fixes surrounding
@@ -130,14 +117,13 @@ async function LandingPage() {
       >
         <div className=" md:flex md:flex-col md:justify-start md:px-4 py-10   min-h-full  md:w-1/2 ">
           <AnimatedText text="PROJECTS" />
-          <p className="text-lg">
-            Take a look at the projects I have, some of worked on before. See
-            how I progressed as a developer, gained skills and learned from
-            mistakes! Click the button to see my projects. There you will be
-            able to see the goals, issues and accomplishments of each of
-            projects allowing you to picture me as a developer. Also there you
-            can potentially view the live site, check out the Github repository
-            or look at the initial Figma design I came up with!
+          <p className="md:text-lg font-sloth-semibold">
+            I have a few prior projects to showcase my journey to becoming more
+            skilled in the field. I currently am working on a streaming
+            application that uses many feature which you can find more details
+            by clicking the below button, and see links to the git repos, figma,
+            live site and even important details about the projects! See how I
+            progressed as a developer, gained skills and learned from mistakes!
           </p>
           <div className=" text-2xl font-sloth-semibold mt-6  md:mt-auto  h-fit w-fit ">
             <Link
