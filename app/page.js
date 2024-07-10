@@ -73,8 +73,8 @@ async function LandingPage() {
             </Link>
           </div>
 
-          <div className="w-full md:w-4/5 h-1/4 md:h-1/2 grid grid-cols-1 md:grid-cols-2 [&>*:hover]:text-xl [&>*:hover]:bg-rose-600 [&>*:hover]:duration-700 [&>*]:flex [&>*]:justify-center [&>*]:items-center [&>*]:uppercase font-sloth-semibold text-white [&>*]:bg-rose-700 gap-1">
-            <Link href="resume"> Resume</Link>
+          <div className="w-full md:w-4/5 h-1/4 md:h-1/2 grid grid-cols-1 md:grid-cols-2 [&>*:hover]:text-xl [&>*:hover]:bg-rose-600 [&>*:hover]:duration-700 [&>*]:mr-4 [&>*]:md:mr-0 [&>*]:flex [&>*]:justify-center [&>*]:items-center [&>*]:uppercase font-sloth-semibold text-white [&>*]:bg-rose-700 gap-1">
+            <Link href="resume" > Resume</Link>
             <Link href="projects">Projects</Link>
             <Link href="skills">Skills</Link>
             <Link href="contact">Contact</Link>
@@ -102,12 +102,12 @@ async function LandingPage() {
             communications and understanding how work within a team.
           </p>
         </div>
-        <div className="md:w-1/2 relative w-full gap-4 flex-col flex h-full h-[600px]">
+        <div className="md:w-1/2 relative w-full gap-4 flex-col flex h-screen [&>*]:h-1/3">
           {" "}
           {/* Set a fixed height, e.g., 600px */}
-          <Job />
-          <Job title="Outlier AI" />
-          <Job title="Freelance" />
+          <Job  description={"Working as an Instructional assistant helping support learners on their journey to become full stack developers. "}/>
+          <Job title="Outlier AI" description={"Working as an chatbot evaluator reviewing AI prompts surrounding programming related problems ranging from algorithmic things like depth first search, or more framework oriented things such as react."} />
+          <Job title="Freelance"  description={"Freelance work mainly on things ranging from frontend bug fixes in things like react to backend working with things like the ChatGPT/ OpenAI."}/>
         </div>
       </section>
 
@@ -147,7 +147,7 @@ async function LandingPage() {
           <ImageCarousel images={images} />
         </div>
       </section>
-      <section id="BLOG" className="min-h-fit    px-4 py-20 md:px-32 w-screen">
+      {/* <section id="BLOG" className="min-h-fit    px-4 py-20 md:px-32 w-screen">
         <AnimatedText text="Blog" />
         <p>{`Some of the articles I've wrote on the site ARTICLE CRAFT which was created sololy by me. Their mostly technical works meant to show my experience or understanding of a technology!`}</p>
         <p className="font-sloth-semibold mt-12 text-lg md:text-xl ">
@@ -156,14 +156,14 @@ async function LandingPage() {
         <div className="flex flex-row gap-8  mt-2 h-96 md:p-2  overflow-x-scroll">
           <Blog data={data} />
         </div>
-      </section>
+      </section> */}
       <section
         id="TECH"
         className=" min-h-screen w-screen md:min-h-fit    relative  md:px-32   px-4 py-8"
       >
         <AnimatedText text="Tech Stack" />
         <div className="w-full  md:w-4/5 ">
-          <div className="w-full h-44 md:h- bg-red"></div>
+          <div className="w-full h-44 md:h- bg-[#FF4654]"></div>
           <h3 className="font-sloth-semibold text-center md:mt-4">
             FULL STACK DEVELOPER | WEB DEVELOPER | REACT DEVELOPER{" "}
           </h3>
@@ -188,7 +188,7 @@ async function LandingPage() {
               src="/Javascript.svg"
             />
           </div>
-          <p className=" md:mt-8 text-lg ">
+          <p className=" md:mt-8 md:text-lg font-sloth-semibold ">
             As a full stack developer, I have a variety of skills. I have
             understanding of two frontend frameworks React and Vue; along with
             technologies that includes them line next.js and nuxt.js! I also
