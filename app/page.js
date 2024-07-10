@@ -56,7 +56,7 @@ async function LandingPage() {
           <div className=" flex flex-row gap-3">
             <Link
               className=""
-              href="https://www.linkedin.com/in/zachary-coats-651211270/"
+              href="https://www.linkedin.com/in/zachary-c-651211270"
               passHref
             >
               <AnimatedIcon src="/version-4/link-red.svg" />
