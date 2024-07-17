@@ -20,7 +20,8 @@ module.exports = {
       fontFamily:{
         "sloth-regular":["sloth-regular"],
         "sloth-semibold":["sloth-semibold"],
-        "sloth-light":"sloth-light"
+        "sloth-light":"sloth-light",
+        'sans': ['Laila', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       fontSize: {
         "hl": "4.625rem", // 74px
