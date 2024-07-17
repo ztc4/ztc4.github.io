@@ -9,7 +9,7 @@ function ProjectPage(props) {
 
 
     let project = projectsData[props.params.id - 1]
-    console.log(project)
+    // console.log(project)
     let {deployment, githubLink, description,goals,issues, accomplishments, figma} = project
 
 
@@ -36,14 +36,14 @@ function ProjectPage(props) {
                     <div className="flex flex-row gap-4 self-center">
                         {figma &&  
                         <Link  href={figma} passHref>
-                            <Image alt="project image" width={40} height={40} className="hover:scale-110 " src="/Figma.svg" />
+                            <Image alt="project image" width={40} height={40} className="hover:scale-110 " src="/icons/Figma.svg" />
                         </Link>}
                         {deployment && 
                         <Link  href={deployment} passHref>
-                            <Image alt="Deployment Link" width={40} height={40} className="hover:scale-110" src="/Web.svg" />
+                            <Image alt="Deployment Link" width={40} height={40} className="hover:scale-110" src="/icons/Web.svg" />
                         </Link >}
                         {githubLink && <Link href={githubLink} passHref>
-                            <Image alt="project image" width={40} height={40} className="hover:scale-110" src="/github.svg" />
+                            <Image alt="project image" width={40} height={40} className="hover:scale-110" src="/icons/github.svg" />
                         </Link>}
 
                     </div>

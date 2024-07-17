@@ -10,9 +10,9 @@ export const projectsData = [
     issues: `
      `,
     images: [
-      "/streaming1.svg",
-      "/streaming2.svg",
-      "/streaming3.svg"
+      "/project-images/streaming1.svg",
+      "/project-images/streaming2.svg",
+      "/project-images/streaming3.svg"
 
     ],
     accomplishments: [
@@ -45,12 +45,12 @@ export const projectsData = [
     issues: `Test driven development was an issue, I wrote all my test but ended up rewriting them since I wanted to do things like change my data for better synchronization with my database schema. I would say I failed planning out how my data was gonna work with my frontend. I also had many issues sizing the image, but later I was able to format them better. There were also many challenges with the deployment on the backend, I had trouble getting the aws lambda server to send images to the frontend, the data kept getting corrupted and that is something I still can't figure out the errors for!
        `,
     images: [
-      "/article-1.svg",
-      "/article-2.svg",
-      "/article-3.svg",
-      "/article-4.svg",
-      "/article-5.svg",
-      "/article-6.svg",
+      "/project-images/article-1.svg",
+      "/project-images/article-2.svg",
+      "/project-images/article-3.svg",
+      "/project-images/article-4.svg",
+      "/project-images/article-5.svg",
+      "/project-images/article-6.svg",
     ],
     accomplishments: [
       "Writing basic unit test",
@@ -81,7 +81,7 @@ export const projectsData = [
     ],
     description: `This is an application meant to allow a business to input data into a file through prompts, the user can add their own text, or take text off an image using endpoint that utilized tesseract, this data then will be used for a personal chatbot`,
     issues: `Lot of syntax errors since I'm new to spring boot`,
-    images: ["/asc-1.svg", "/asc-2.svg"],
+    images: ["/project-images/asc-1.svg", "/project-images/asc-2.svg"],
     accomplishments: [
       "Made better Animations",
       "Learned Nuxt.js and Vue.js",
@@ -113,7 +113,7 @@ export const projectsData = [
     description: `I took an older project for an notes application, and recreated an new ui for it using the material ui application`,
     issues: ` Fix alot of errors in the api I was using to not cause errors, and add a few more endpoints to make the site crash less 
      `,
-    images: ["/notes-1.svg", "/notes-2.svg", "/n-4.png", "/n-5.png"],
+    images: ["/project-images/notes-1.svg", "/project-images/notes-2.svg", "/project-images/n-4.png", "/project-images/n-5.png"],
     accomplishments: [
       `Implement React Context to handle state`,
       "Fixed a few errors in my API and fixed the error I was making of sending status after res.json/send",
@@ -141,7 +141,7 @@ export const projectsData = [
     description: `My portfolio site, except using figma this time to allow for a better deisgn for desktop and mobile! `,
     issues: `No issues, when making the site
      `,
-    images: ["/po-1.svg", "/po-2.svg", "/po-3.svg"],
+    images: ["/project-images/po-1.svg", "/project-images/po-2.svg", "/project-images/po-3.svg"],
     accomplishments: [
       "Wireframing and programming the site in one Day, or to be specific 12 hours",
     ],
@@ -174,7 +174,7 @@ export const projectsData = [
          This ended up with me not having an overarching state(redux,context) and instead making several extra api calls to my server and sending more data than it should be.
          I once messed up my project playing with TypeScript, so I had to find a git version that didn't mess up my deploy.
          `,
-    images: ["/e-1.svg", "/e-2.svg", "/e-2.svg"],
+    images: ["/project-images/e-1.svg", "/project-images/e-2.svg", "/project-images/e-2.svg"],
     accomplishments: [
       "The first accomplishment would most likely be learning Next.js, it was what I set off to do, so no surprise there.",
       "An unexpected accomplishment would be learning Tailwind. I made a mockery of it before, thinking it made the code look like gibberish.",
@@ -204,7 +204,7 @@ export const projectsData = [
     description: `An android application created using jetpack compose, room, kotlin and the mvm architecture`,
     issues: ` Issued understanding what I was implementing due to documentation; I was making it work but wasn't understanding whats an entity, or dao was, I struggled understanding these things connected.
        `,
-    images: ["/c-1.svg", "/c-2.svg"],
+    images: ["/project-images/c-1.svg", "/project-images/c-2.svg"],
     accomplishments: [
       "Understanding how to use create and use local databases in the future.",
       "Understanding how to use this data using the Viewmodel layer.",

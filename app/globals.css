@@ -28,16 +28,30 @@
 
 @font-face {
   font-family: "sloth-semibold";
-  src: url("../public/Sloth-SemiBold.ttf");
+  src: url("../public/fonts/sloth/Sloth-SemiBold.ttf");
 }
 @font-face {
   font-family: "sloth-regular";
-  src: url("../public/Sloth-Regular.ttf");
+  src: url("../public/fonts/sloth/Sloth-Regular.ttf");
 }
 @font-face {
   font-family: "sloth-light";
-  src: url("../public/Sloth-Light.ttf");
+  src: url("../public/fonts/sloth/Sloth-Light.ttf");
 }
+@font-face {
+  font-family: "KyivTypeBold";
+  src: url("../public/fonts/kyiv/KyivTypeBold.otf");
+}
+@font-face {
+  font-family: "KyivTypeBold-";
+  src: url("../public/fonts/kyiv/KyivTypeBold-.otf");
+}
+@font-face {
+  font-family: "KyivTypeMedium-";
+  src: url("../public/fonts/kyiv/KyivTypeMedium-.otf");
+}
+
+
 
 .carousel .slide {
   margin: 0 10px; /* Adjust the margin as needed */

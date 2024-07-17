@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <head>
       <link href="https://fonts.googleapis.com/css2?family=Laila:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className=" font-sans">{children}</body>
+      <body className={inter &&"font-sans"}>{children}</body>
     </html>
   )
 }

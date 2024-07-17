@@ -2,34 +2,35 @@ import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 import YouTubePlayer from "../components/YoutubePlayer";
+import ExperienceCard from "../components/experience-card";
 
 export default async function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden">
-      <header className="h-[500px] relative px-20 pt-6 bg-cover bg-no-repeat bg-[url('/version-4/landing-image.jpg')] bg-blue-700">
-        <nav className="flex h-fit flex-row justify-between  ">
-          <div className=" flex text-[20px] flex-row gap-4">
+    <div className="min-h-screen bg-background-light dark:bg-background-dark text-secondary-light dark:text-secondary-dark overflow-x-hidden">
+      <header className="h-[500px] bg-custom-bottom sm:bg-center relative px-20 pt-6 bg-cover bg-no-repeat bg-[url('/version-4/landing-image.jpg')] bg-blue-700">
+        <nav className="grid grid-cols-3  font-KyivTypeBold- justify-between  ">
+          <div className=" flex text-[20px] items-center  flex-row gap-4">
             <Link href="resume" className="">
               Resume
             </Link>
             <Link href="projects">Projects</Link>
             <Link href="skills">Skills</Link>
           </div>
-          <div className="absolute left-1/2 transform -translate-x-1/2">
+          <div className=" flex items-center justify-center">
             <Link href="" className="text-[40px] " aria-label="Home">
               HelloZachary
             </Link>
           </div>
 
-          <div className="text-[20px]">
+          <div className="text-[20px] flex items-center justify-end">
             <Link href="contact">Contact</Link>
           </div>
         </nav>
 
-        <h1 class="text-[128px] absolute bottom-8  font-bold leading-[0.75]">
+        <h1 className="text-[60px] sm:text-[128px] absolute bottom-12 sm:bottom-8 font-KyivTypeBold-  font-bold leading-[0.75]">
           Zachary
           <br />
-          <span className="ml-72">Coats</span>
+          <span className=" ml-12 sm:ml-72">Coats</span>
         </h1>
       </header>
       <section
@@ -53,7 +54,11 @@ export default async function Home() {
         </div>
       </section>
       <section id="Work-Experience" className="mx-20  my-10  screen h-[458px]">
-        <div className=" h-[458px] bg-[url('/version-4/work-experience-image.jpg')] bg-no-repeat bg-cover"></div>
+        <div className=" h-[458px] flex flex-row  justify-center items-center gap-10 bg-[url('/version-4/work-experience-image.jpg')] bg-no-repeat bg-cover ">
+          <ExperienceCard />
+          <ExperienceCard />
+          <ExperienceCard />
+        </div>
       </section>
       <section
         id="More"
@@ -102,13 +107,13 @@ export default async function Home() {
               <div className="flex flex-row gap-4  [&>*]:duration-1000">
                 <Link
                   href="skills"
-                  className=" border-black p-2 rounded-full    border-2"
+                  className=" border-black p-2 px-4 rounded-full hover:bg-blue    border-2"
                 >
                   Skills
                 </Link>
                 <Link
                   href="projects"
-                  className=" border-black relative p-2 rounded-full  z-10 hover:bg-red  border-2"
+                  className=" border-black  p-2 px-4 rounded-full   hover:bg-blue  border-2"
                 >
                   Projects
                 </Link>
@@ -117,6 +122,17 @@ export default async function Home() {
           </div>
         </div>
       </section>
+      <footer className=" bg-[#000] font-sans relative font-bold py-8 text-white">
+        <div className="flex flex-col justify-center items-center">
+          <Link href="" className="text-xl font-KyivTypeMedium-">
+            HelloZachary.Dev
+          </Link>
+          <p className="text-center text-xs">
+            {" "}
+            Developed using Next.js <br></br> &<br></br> Deployed on Vercel
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

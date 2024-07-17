@@ -13,14 +13,14 @@ function Project({data,index}) {
                     <div className='flex flex-row w-56 z-20 [&>*]:duration-500 bg-gray-950/20 px-4 py-2 white outline gap-12 rounded-3xl'>
                     {figma &&  
                         <Link  href={figma} passHref>
-                            <Image alt="project image" width={30} height={30} className="hover:scale-110" src="/Figma.svg" />
+                            <Image alt="project image" width={30} height={30} className="hover:scale-110" src="/icons/Figma.svg" />
                         </Link>}
                         {deployment && 
                         <Link  href={deployment} passHref>
-                            <Image alt="Deployment Link" width={30} height={30} className="hover:scale-110" src="/Web.svg" />
+                            <Image alt="Deployment Link" width={30} height={30} className="hover:scale-110" src="/icons/Web.svg" />
                         </Link >}
                         {githubLink && <Link href={githubLink} passHref>
-                            <Image alt="project image" width={30} height={30} className="hover:scale-110" src="/github.svg" />
+                            <Image alt="project image" width={30} height={30} className="hover:scale-110" src="/icons/github.svg" />
                         </Link>    }                   
                     </div>
                 </div>
