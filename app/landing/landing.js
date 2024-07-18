@@ -39,21 +39,24 @@ export default async function Home() {
       >
         <h2 className="text-[32px] font-sans font-bold">About Me</h2>
         <p className="text-center  text-[16px] ">
-          I'm a Software Engineer based in Atlanta, Georgia, with a profound
+          {`  I'm a Software Engineer based in Atlanta, Georgia, with a profound
           fascination for the diverse applications of coding. With over a year
           of experience in full stack development, I've honed my skills through
           freelance work, developing private chatbots, and a role at LaunchCode
           where I gained experience in web development, bug fixing, teaching,
           and team collaboration. Recently, I have been deepening my knowledge
           in algorithms, data structures, problem-solving techniques, and
-          software architecture.
+          software architecture.`}
         </p>
         <div className="min-h-fit w-full flex flex-col items-center justify-center">
           <p className="text-[32px] ">Quick Introduction</p>
           <YouTubePlayer videoId={"YOUR_YOUTUBE_VIDEO_ID"} />
         </div>
       </section>
-      <section id="Work-Experience" className="lg:mx-20  my-10  min-h-fit lg:h-[458px]">
+      <section
+        id="Work-Experience"
+        className="lg:mx-20  my-10  min-h-fit lg:h-[458px]"
+      >
         <div className=" py-8 flex-wrap sm:flex-row  bg-pink bg-center min-h-fit lg:h-[458px] flex flex-col lg:flex-row  justify-center items-center gap-10 bg-[url('/version-4/work-experience-image2.png')] bg-no-repeat bg-cover ">
           <ExperienceCard />
           <ExperienceCard />
@@ -77,11 +80,11 @@ export default async function Home() {
               Current Status
             </h3>
             <p className="lg:text-[20px] text-[14px]  text-center">
-              Working towards obtaining an Amazon Web Service Cloud Solution
+              {`Working towards obtaining an Amazon Web Service Cloud Solution
               Architect Certification, have prior experience using some of the
               services, but decided to go more into detail to allow for an
               greater understanding and also to build a foundation for things I
-              might take interest in the future
+              might take interest in the future`}
             </p>
           </div>
         </div>
