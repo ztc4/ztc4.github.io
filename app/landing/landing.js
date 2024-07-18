@@ -99,11 +99,11 @@ export default async function Home() {
           <div className="w-full lg:w-1/2">
             <h3 className="text-[32px] text-center opacity-50 my-4">Skills</h3>
             <p className="lg:text-[20px] text-[14px] text-center">
-              Working towards obtaining an Amazon Web Service Cloud Solution
+              {`              Working towards obtaining an Amazon Web Service Cloud Solution
               Architect Certification, have prior experience using some of the
               services, but decided to go more into detail to allow for an
               greater understanding and also to build a foundation for things I
-              might take interest in the future
+              might take interest in the future`}
             </p>
             <div className="flex flex-col w-full mt-8 text-[20px] justify-center items-center">
               <label className="">See More</label>
@@ -131,7 +131,7 @@ export default async function Home() {
             HelloZachary.Dev
           </Link>
           <p className="text-center text-xs">
-            {" "}
+           
             Developed using Next.js <br></br> &<br></br> Deployed on Vercel
           </p>
         </div>
