@@ -1,62 +1,96 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import Skill from '../components/skill';
-import {frontend,backend,languages, other} from "./skills.data"
+import Link from "next/link";
+import { frontend, backend, languages, other } from "./skills.data";
+import SkillCard from "../components/SkillsCard";
+import Skill from "../components/Skills";
+
 
 export const metadata = {
-    title: 'Skills',
-    description: 'Zachary Coats Skills as an Web developer',
-  }
-
+  title: "Skills",
+  description:
+    "Portfolio site for Zachary Coats, junior software engineer/developer used to allow people to see projects, what skills I currently have and a little about me!",
+};
 function Skills() {
+  return (
 
-    function skillInfoConstructor(text,color,facing){
-        return {color: color, text: text, direction: facing}
-    }
+    <div className="min-h-screen skill-background bg-background-light dark:bg-background-dark  py-4 bg-no-repeat flex flex-col">
+      <nav className="grid grid-cols-3 px-10 text-white z-10 sticky top-0  font-KyivTypeBold- justify-between  ">
+        <div className=" hidden group  lg:flex text-[20px] items-center  flex-row gap-4">
+          <Link href="resume" className="">
+            Resume
+          </Link>
+          <Link href="projects" className=" ">
+            Projects
+          </Link>
+          <Link href="skills">Skills</Link>
+        </div>
+        <div className=" flex items-center mx-auto justify-center">
+          <Link href="/" className="text-lg lg:text-[40px] " aria-label="Home">
+            HelloZachary
+          </Link>
+        </div>
 
-    let data = {text:"hello", color:"\green", facing:"left"}
-    return ( 
-<div className="w-screen overflow-x-hidden min-h-screen  flex flex-col min-[400px]:px-10 md:px-20 lg:px-30 2xl:px-60 font-semibold p-4 py-12 text-stone-900 font-['Sloth'] bg-white">
+        <div className="text-[20px] px-10 hidden lg:flex items-center justify-end">
+          <Link
+            href="contact"
+            className="rounded-full border-2 p-2 px-3 border-black dark:border-white duration-700  hover:bg-[#222] hover:bg-opacity-70 hover:text-secondary-dark   dark:hover:bg-white dark:hover:text-black"
+          >
+            Contact
+          </Link>
+        </div>
+      </nav>
 
-
-    <div className='flex-col flex mt-6 mb-12 gap-4'>
-        <h1 className=" text-stone-900 -mb-1 text-4xl md:text-5xl  lg:text-9xl font-normal">Skills</h1>
-        <div className=" font-normal text-left text-[#1C1B1F] ">I am most experienced in frontend web development, with backend express.js being the second best. I have 
-                built a solid foundation by learning many things from C# to Kotlin and experience with web development,
-                allows me to gain skills that can translate from mobile to desktop. Lately have been paying attention to 
-                mistakes with architecture and design problems in my applications! 
+      <div className="mt-12 flex flex-col z-10 text-white  justify-center items-center">
+        <h1 className="text-[64px]  font-bold">Skills</h1>
+        <p className=" text-center max-w-[600px] text-sm sm:text-lg">
+          I am most experienced in frontend web development, with backend
+          express.js being the second best. I have built a solid foundation by
+          learning many things from C# to Kotlin and experience with web
+          development, allows me to gain skills that can translate from mobile
+          to desktop. Lately have been paying attention to mistakes with
+          architecture and design problems in my applications!
+        </p>
+      </div>
+      <div className=" z-10 mt-8  justify-center flex-wrap min-w-it gap-4 flex flex-col items-center sm:flex-row">
+        <SkillCard>
+          {languages.map((languages) => (
+            <Skill
+              category=""
+              text={languages.description}
+              name={languages.name}
+              key={languages.name}
+            />
+          ))}
+        </SkillCard>
+        <SkillCard category="Frontend">
+          {frontend.map((frontendFramework) => (
+            <Skill
+              text={frontendFramework.description}
+              name={frontendFramework.name}
+              key={frontendFramework.name}
+            />
+          ))}
+        </SkillCard>
+        <SkillCard category="Backend">
+          {backend.map((backend) => (
+            <Skill
+              text={backend.description}
+              name={backend.name}
+              key={backend.name}
+            />
+          ))}
+        </SkillCard>
+        <SkillCard category="Tools">
+          {other.map((other) => (
+            <Skill
+              text={other.description}
+              name={other.name}
+              key={other.name}
+            />
+          ))}
+        </SkillCard>
+      </div>
     </div>
-    <h3 className=" text-stone-900 text-lg lg:text-4xl font-semibold"><span>Programming </span>Languages</h3>
-    <div className='flex flex-row  flex-wrap gap-1 md:gap-4 left-0  w-full'>
-        {languages.map(language => <Skill color="red" text={language.description} name={language.name} key={language.name}/>)}
-
-    </div>
-    
-
-    
-    <h3 className=" text-stone-900 text-lg lg:text-4xl font-semibold"><span>Frontend </span>Frameworks</h3>
-    <div className='flex flex-row flex-wrap gap-1 md:gap-4 left-0 justify-center min-[355px]:justify-start  w-full'>
-        {frontend.map(frontendFramework => <Skill color="green" text={frontendFramework.description} name={frontendFramework.name} key={frontendFramework.name}/>)}
-    </div>
-    <h3 className=" text-stone-900 text-lg lg:text-4xl font-semibold"><span>Backend </span>Frameworks</h3>
-    <div className='flex flex-row flex-wrap gap-1 md:gap-4 left-0  w-full'>
-        {backend.map(language => <Skill color="blue" text={language.description} name={language.name} key={language.name}/>)}
-    </div>
-    <h3 className=" text-stone-900 text-lg lg:text-4xl font-semibold"><span>Other </span>Tools</h3>
-    <div className='flex flex-row flex-wrap gap-1 md:gap-4 left-0  w-full'>
-        {other.map(language => <Skill color="blue" text={language.description} name={language.name} key={language.name}/>)}
-    </div>
-    <p className='text-[#727272]'>Skills are ranked in order of proficiency and experience</p>
-
-    
-
-  </div>
-  <Link className=" absolute left-0 top-2 md:top-0 items-center hover:text-red flex flex-row-reverse" href="/" passHref>
-                <p className="hidden md:block text-pl">Back to the Previous Page</p>
-                <Image alt="Back Button" width={10} height={10} src="/arrow_back_ios.svg" className="h-10  w-10 md:h-16 md:w-16 m-4 ml-8  rounded-full cursor-pointer  "></Image>
-        </Link>
-</div>
-     );
+  );
 }
 
 export default Skills;

@@ -40,6 +40,11 @@ export const frontend = [
   },
   {
       
+    name: "Vue",
+    description: `This is the main testing library that comes with next.js application so I learned it. I previous knew testing with react and jest, but I understand basic syntax for this also. I have experience using this for test driven development in my article craft project`
+  },
+  {
+      
     name: "Compose",
     description: `This is the main library used when created Mobile Applications. Learned it mainly because it's what used when learning android development through Google Android development course.`
   },
@@ -72,7 +77,14 @@ export const backend = [
   {
     name: "MySQL",
     description: "I recently learned this due to working with springboot and some due to android data persistence library ROOM. I can understand the queries and how to connect difference schema building complex data."
+  },{
+    name: "Springboot",
+    description:""
   },
+  {
+    name: "Express.js",
+    description:""
+  }
 
 ]
 
@@ -86,6 +98,18 @@ export const other = [
       description: " I have learned wireframing using figma, and turning that wireframe into a real-world project "
     },{
       name: "AWS",
+      description:""
+    },
+    {
+      name: "Canvas",
+      description:""
+    },
+    {
+      name: "Jira",
+      description:""
+    },
+    {
+      name: "Github Projects",
       description:""
     }
 

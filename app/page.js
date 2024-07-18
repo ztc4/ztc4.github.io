@@ -1,222 +1,148 @@
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./components/button";
-import ImageCarousel from "./components/Image-Carousel";
 import axios from "axios";
-import AnimatedIcon from "./components/AnimatedIcon";
-import AnimatedText from "./components/header";
-import Blog from "./components/Blog";
-import Job from "./components/job";
+import YouTubePlayer from "./components/YoutubePlayer";
+import ExperienceCard from "./components/experience-card";
 
-async function getArticle(id) {
-  let data = axios
-    .get(
-      `https://g5mepch7r6.execute-api.us-east-1.amazonaws.com/dev/article/${id}`
-    )
-    .then((res) => {
-      return res.data;
-    });
-
-  return data;
-}
-
-async function LandingPage() {
-  const images = [
-    { image: "/image-1.svg", project: "2" },
-    { image: "/image-2.svg", project: "3" },
-    { image: "/image-3.svg", project: "1" },
-  ];
-  let data = await getArticle("657630a2d68381e8ed305eb8");
-  // console.log(data)
-
+export default async function Home() {
   return (
-    <div className="bg-white m-0 p-0  font-sloth-light font-ps md:font-pl md:font-sloth-regular text-dark overflow-x-hidden 3xl:my-8">
-      <section
-        id="ABOUT"
-        className=" min-h-screen md:min-h-screen justify-start items-start flex flex-row px-0 mx-0  bg-[url('/version-4/bg-image.jpg')] bg-cover bg-center bg-no-repeat w-screen "
-      >
-        <Image
-          alt="An Image of Zachary"
-          width={100}
-          height={450}
-          className="h-4/5 w-20 my-auto object-cover "
-          src="/version-4/name.svg"
-        />
+    <div className="min-h-screen bg-background-light dark:bg-background-dark text-secondary-light dark:text-secondary-dark overflow-x-hidden">
+      <header className="h-[500px] bg-custom-bottom text-white lg:bg-center relative px-7 lg:px-20 pt-6 bg-cover bg-no-repeat bg-[url('/version-4/landing-image.jpg')] bg-blue-700">
+        <nav className="grid grid-cols-3 z-10 sticky top-0  font-KyivTypeBold- justify-between  ">
+          <div className=" hidden group  lg:flex text-[20px] items-center  flex-row gap-4">
+            <Link href="resume" className="">
+              Resume
+            </Link>
+            <Link href="projects" className=" ">
+              Projects
+            </Link>
+            <Link href="skills">Skills</Link>
+          </div>
+          <div className=" flex items-center mx-auto justify-center">
+            <Link href="" className="text-lg lg:text-[40px] " aria-label="Home">
+              HelloZachary
+            </Link>
+          </div>
 
-        <div className=" w-full md:w-2/4 h-screen flex justify-center md:justify-end py-10 px-2 pr-4 md:px-8 gap-8 flex-col">
-          {/* <h1 className=" whitespace-nowrap  opacity-0  absolute left-0  text-hs md:text-hl text-white font-sloth-semibold ">Zachary Coats</h1> */}
-          <div>
-            <h4 className=" text-[#FF4654] text-xl md:text-hs  mb-3 font-sloth-semibold">
-              Fullstack Software Engineer
-            </h4>
-            <p className=" md:text-lg font-sloth-semibold  text-white ">
-              {` I'm a Software Engineer stationed in Atlanta, Georgia with a profound fascination in the diverse applications of coding. Over the recent two years, I’ve dedicated significant hours to grasping and honing my programming skills, particularly focusing on web development. Lately, I've been deepening my knowledge in concepts like algorithms, data structures, problem-solving techniques, and software architecture.`}
+          <div className="text-[20px] hidden lg:flex items-center justify-end">
+            <Link
+              href="contact"
+              className="rounded-full border-2 p-2 px-3 border-black dark:border-white duration-700  hover:bg-[#222] hover:bg-opacity-70 hover:text-secondary-dark   dark:hover:bg-white dark:hover:text-black"
+            >
+              Contact
+            </Link>
+          </div>
+        </nav>
+
+        <h1 className="text-[80px]   lg:text-[128px] ml-auto absolute max bottom-12 lg:bottom-8 font-KyivTypeBold-  font-bold leading-[0.75]">
+          Zachary
+          <br />
+          <span className=" ml-12 lg:ml-72">Coats</span>
+        </h1>
+      </header>
+      <section
+        id="About"
+        className="flex flex-col py-10 min-h-fit max-w-[800px] gap-4 w-full px-2 lg:w-1/2 mx-auto justify-center items-center"
+      >
+        <h2 className="text-[32px] font-sans font-bold">About Me</h2>
+        <p className="text-center  text-[16px] ">
+          I'm a Software Engineer based in Atlanta, Georgia, with a profound
+          fascination for the diverse applications of coding. With over a year
+          of experience in full stack development, I've honed my skills through
+          freelance work, developing private chatbots, and a role at LaunchCode
+          where I gained experience in web development, bug fixing, teaching,
+          and team collaboration. Recently, I have been deepening my knowledge
+          in algorithms, data structures, problem-solving techniques, and
+          software architecture.
+        </p>
+        <div className="min-h-fit w-full flex flex-col items-center justify-center">
+          <p className="text-[32px] ">Quick Introduction</p>
+          <YouTubePlayer videoId={"YOUR_YOUTUBE_VIDEO_ID"} />
+        </div>
+      </section>
+      <section
+        id="Work-Experience"
+        className="lg:mx-20  my-10  min-h-fit lg:h-[458px]"
+      >
+        <div className=" py-8 flex-wrap sm:flex-row  bg-pink bg-center min-h-fit lg:h-[458px] flex flex-col lg:flex-row  justify-center items-center gap-10 bg-[url('/version-4/work-experience-image2.png')] bg-no-repeat bg-cover ">
+          <ExperienceCard />
+          <ExperienceCard />
+          <ExperienceCard />
+        </div>
+      </section>
+      <section
+        id="More"
+        className=" flex flex-col min-h-fit gap-20 justify-center px-2 items-center my-20"
+      >
+        <div className="flex max-w-[1200px] w-full flex-col lg:w-3/4 lg:flex-row gap-6 justify-center items-center  min-h-fit  lg:h-[380px]">
+          <Image
+            alt="An Image of Zachary"
+            width={383}
+            height={489}
+            className=" lg:h-[382px] w-full lg:w-1/2 object-cover"
+            src="/version-4/current-status-image.png"
+          />
+          <div className="w-full lg:w-1/2">
+            <h3 className="text-[32px] text-center opacity-50 my-4">
+              Current Status
+            </h3>
+            <p className="lg:text-[20px] text-[14px]  text-center">
+              Working towards obtaining an Amazon Web Service Cloud Solution
+              Architect Certification, have prior experience using some of the
+              services, but decided to go more into detail to allow for an
+              greater understanding and also to build a foundation for things I
+              might take interest in the future
             </p>
           </div>
-          <div className=" flex flex-row gap-3">
-            <Link
-              className=""
-              href="https://www.linkedin.com/in/zachary-c-651211270"
-              passHref
-            >
-              <AnimatedIcon src="/version-4/link-red.svg" />
-            </Link>
-            <Link
-              className=""
-              href="mailto:zachary4coats@gmail.com?subject=Email Subject&body=Hello, I would like to discuss..."
-              passHref
-            >
-              <AnimatedIcon src="/version-4/mail-red.svg" />
-            </Link>
-            <Link className="" href="https://github.com/ztc4" passHref>
-              <AnimatedIcon src="/version-4/git-red.svg" />
-            </Link>
-          </div>
-
-          <div className="w-full md:w-4/5 h-1/4 md:h-1/2 grid grid-cols-1 md:grid-cols-2 [&>*:hover]:text-xl [&>*:hover]:bg-rose-600 [&>*:hover]:duration-700 [&>*]:mr-4 [&>*]:md:mr-0 [&>*]:flex [&>*]:justify-center [&>*]:items-center [&>*]:uppercase font-sloth-semibold text-white [&>*]:bg-rose-700 gap-1">
-            <Link href="resume" > Resume</Link>
-            <Link href="projects">Projects</Link>
-            <Link href="skills">Skills</Link>
-            <Link href="contact">Contact</Link>
+        </div>
+        <div className="flex  max-w-[1200px] lg:flex-row-reverse lg:w-3/4 flex-col gap-6 justify-center items-center min-h-fit  lg:h-[380px]">
+          <Image
+            alt="An Image of Zachary"
+            width={383}
+            height={489}
+            className=" lg:h-[382px] w-full  2xl:h-96 2xl:w- lg:w-1/2 object-cover"
+            src="/version-4/skills-image.jpg"
+          />
+          <div className="w-full lg:w-1/2">
+            <h3 className="text-[32px] text-center opacity-50 my-4">Skills</h3>
+            <p className="lg:text-[20px] text-[14px] text-center">
+              Working towards obtaining an Amazon Web Service Cloud Solution
+              Architect Certification, have prior experience using some of the
+              services, but decided to go more into detail to allow for an
+              greater understanding and also to build a foundation for things I
+              might take interest in the future
+            </p>
+            <div className="flex flex-col w-full mt-8 text-[20px] justify-center items-center">
+              <label className="">See More</label>
+              <div className="flex flex-row gap-4 mt-3  [&>*]:duration-1000">
+                <Link
+                  href="skills"
+                  className=" border-black dark:border-white p-2 px-4 rounded-full   hover:bg-black hover:text-secondary-light   dark:hover:bg-white dark:hover:text-black  border-2"
+                >
+                  Skills
+                </Link>
+                <Link
+                  href="projects"
+                  className="  p-2 px-4 rounded-full border-black dark:border-white  hover:bg-black hover:text-secondary-light   dark:hover:bg-white dark:hover:text-black  border-2"
+                >
+                  Projects
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section
-        id="WORK EXPERIENCE"
-        className="min-h-screen md:min-h-fit bg-[#1C1B1F]    px-4 py-8 md:justify-center md:py-20 md:px-32 flex-col md:flex-row flex w-screen"
-      >
-        <div className=" md:flex md:flex-col md:justify-start md:px-4 py-10   min-h-full  md:w-1/2 ">
-          <AnimatedText text="Work Experience" color="red" />
-          <p className="md:text-lg font-sloth-semibold  text-white ">
-            So current I have about 1+ year of experience working in the full
-            stack development field. I initially started of gaining experience
-            with being a freelance developer doing simple bug fixes surrounding
-            the frontend side of things. I then transition to work surrounding
-            building a private chatbot for small businesses, and along side of
-            that I was a chatbot evaluator for outlier AI. I then moved away
-            toward the corporate side through getting a web development focused
-            job with LaunchCode. Through Launchcode I have had time to gain
-            experience with bug fixing, teaching , management and supporting,
-            and documenting things for understanding, and even some full stack
-            development. I was able to gaom valuable experience in
-            communications and understanding how work within a team.
+      <footer className=" bg-[#000] font-sans relative font-bold py-8 text-white">
+        <div className="flex flex-col justify-center items-center">
+          <Link href="" className="text-xl font-KyivTypeMedium-">
+            HelloZachary.Dev
+          </Link>
+          <p className="text-center text-xs">
+            {" "}
+            Developed using Next.js <br></br> &<br></br> Deployed on Vercel
           </p>
-        </div>
-        <div className="md:w-1/2 relative w-full gap-4 flex-col flex h-screen [&>*]:h-1/3">
-          {" "}
-          {/* Set a fixed height, e.g., 600px */}
-          <Job  description={"Working as an Instructional assistant helping support learners on their journey to become full stack developers. "}/>
-          <Job title="Outlier AI" description={"Working as an chatbot evaluator reviewing AI prompts surrounding programming related problems ranging from algorithmic things like depth first search, or more framework oriented things such as react."} />
-          <Job title="Freelance"  description={"Freelance work mainly on things ranging from frontend bug fixes in things like react to backend working with things like the ChatGPT/ OpenAI."}/>
-        </div>
-      </section>
-
-      <section
-        id="PROJECTS"
-        className="min-h-screen md:min-h-fit    px-4 py-8 md:justify-center md:py-20 md:px-32 flex-col md:flex-row flex w-screen"
-      >
-        <div className=" md:flex md:flex-col md:justify-start md:px-4 py-10   min-h-full  md:w-1/2 ">
-          <AnimatedText text="PROJECTS" />
-          <p className="md:text-lg font-sloth-semibold">
-            I have a few prior projects to showcase my journey to becoming more
-            skilled in the field. I currently am working on a streaming
-            application that uses many feature which you can find more details
-            by clicking the below button, and see links to the git repos, figma,
-            live site and even important details about the projects! See how I
-            progressed as a developer, gained skills and learned from mistakes!
-          </p>
-          <div className=" text-2xl font-sloth-semibold mt-6  md:mt-auto  h-fit w-fit ">
-            <Link
-              href="projects"
-              className="flex flex-row duration-500 hover:underline gap-10 group group-hover:text-purple-500"
-            >
-              <p className="duration-1000  group-hover:ml-8">
-                See More Projects
-              </p>
-              <Image
-                alt="Javascript icon"
-                className="group-hover:ml-8 duration-1000 underline"
-                width={30}
-                height={30}
-                src="/arrow_right_alt.svg"
-              />
-            </Link>
-          </div>
-        </div>
-        <div className="relative md:w-1/2   md:flex md:justify-center md:items-center h-full">
-          <ImageCarousel images={images} />
-        </div>
-      </section>
-      {/* <section id="BLOG" className="min-h-fit    px-4 py-20 md:px-32 w-screen">
-        <AnimatedText text="Blog" />
-        <p>{`Some of the articles I've wrote on the site ARTICLE CRAFT which was created sololy by me. Their mostly technical works meant to show my experience or understanding of a technology!`}</p>
-        <p className="font-sloth-semibold mt-12 text-lg md:text-xl ">
-          Click to visit the blog
-        </p>
-        <div className="flex flex-row gap-8  mt-2 h-96 md:p-2  overflow-x-scroll">
-          <Blog data={data} />
-        </div>
-      </section> */}
-      <section
-        id="TECH"
-        className=" min-h-screen w-screen md:min-h-fit    relative  md:px-32   px-4 py-8"
-      >
-        <AnimatedText text="Tech Stack" />
-        <div className="w-full  md:w-4/5 ">
-          <div className="w-full h-44 md:h- bg-[#FF4654]"></div>
-          <h3 className="font-sloth-semibold text-center md:mt-4">
-            FULL STACK DEVELOPER | WEB DEVELOPER | REACT DEVELOPER{" "}
-          </h3>
-          <div
-            id="Tech-Icons"
-            className="[&>*]:p-2 flex justify-center   md:absolute md:right-32  md:flex-col top-20    [&>*]:cursor-pointer [&>*]:md:h-16 [&>*]:md:w-16 [&>*]:w-10 [&>*]:h-10"
-          >
-            <Image
-              alt="Github icons"
-              width={30}
-              height={30}
-              src="/node.svg"
-              className=""
-            />
-            <Image alt="React icons" width={30} height={30} src="/React.svg" />
-            <Image alt="Vue icons" width={30} height={30} src="/vuejs.svg" />
-            <Image alt="Kotlin icon" width={30} height={30} src="/Kotlin.svg" />
-            <Image
-              alt="Javascript icon"
-              width={30}
-              height={30}
-              src="/Javascript.svg"
-            />
-          </div>
-          <p className=" md:mt-8 md:text-lg font-sloth-semibold ">
-            As a full stack developer, I have a variety of skills. I have
-            understanding of two frontend frameworks React and Vue; along with
-            technologies that includes them line next.js and nuxt.js! I also
-            have great ability in backend development, specifically in
-            express.js and springboot, with ability to build REST APIS in both,
-            and use NoSql(Mongodb) and SQL databases! With many projects, and
-            freelance work, you can be confident your getting a developer that
-            knows how to communicate, motivated to take on challenges and
-            progress as developer{" "}
-          </p>
-          <div className="mx-auto bg-black my-8 h-fit w-fit">
-            <Link href="skills">
-              <Button text="SKILLS" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <footer className="flex-col flex text-white h-40 px-auto text-center py-10  bg-black  gap-0">
-        <div className="  ">Zachary Coats</div>
-        <div className="   ">Junior Software Engineer</div>
-        <div className="  ">
-          @zachary4coats@gmail.com
-          <br />
         </div>
       </footer>
     </div>
   );
 }
-
-export default LandingPage;

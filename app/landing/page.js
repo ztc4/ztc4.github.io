@@ -7,9 +7,9 @@ import ExperienceCard from "../components/experience-card";
 export default async function Home() {
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark text-secondary-light dark:text-secondary-dark overflow-x-hidden">
-      <header className="h-[500px] bg-custom-bottom sm:bg-center relative px-20 pt-6 bg-cover bg-no-repeat bg-[url('/version-4/landing-image.jpg')] bg-blue-700">
-        <nav className="grid grid-cols-3  font-KyivTypeBold- justify-between  ">
-          <div className=" flex text-[20px] items-center  flex-row gap-4">
+      <header className="h-[500px] bg-custom-bottom text-white lg:bg-center relative px-7 lg:px-20 pt-6 bg-cover bg-no-repeat bg-[url('/version-4/landing-image.jpg')] bg-blue-700">
+        <nav className="grid grid-cols-3   font-KyivTypeBold- justify-between  ">
+          <div className=" hidden lg:flex text-[20px] items-center  flex-row gap-4">
             <Link href="resume" className="">
               Resume
             </Link>
@@ -17,25 +17,25 @@ export default async function Home() {
             <Link href="skills">Skills</Link>
           </div>
           <div className=" flex items-center justify-center">
-            <Link href="" className="text-[40px] " aria-label="Home">
+            <Link href="" className="text-lg lg:text-[40px] " aria-label="Home">
               HelloZachary
             </Link>
           </div>
 
-          <div className="text-[20px] flex items-center justify-end">
+          <div className="text-[20px] hidden lg:flex items-center justify-end">
             <Link href="contact">Contact</Link>
           </div>
         </nav>
 
-        <h1 className="text-[60px] sm:text-[128px] absolute bottom-12 sm:bottom-8 font-KyivTypeBold-  font-bold leading-[0.75]">
+        <h1 className="text-[80px]   lg:text-[128px] ml-auto absolute max bottom-12 lg:bottom-8 font-KyivTypeBold-  font-bold leading-[0.75]">
           Zachary
           <br />
-          <span className=" ml-12 sm:ml-72">Coats</span>
+          <span className=" ml-12 lg:ml-72">Coats</span>
         </h1>
       </header>
       <section
         id="About"
-        className="flex flex-col py-10 gap-4 w-1/2 mx-auto justify-center items-center"
+        className="flex flex-col py-10 min-h-fit max-w-[800px] gap-4 w-full px-2 lg:w-1/2 mx-auto justify-center items-center"
       >
         <h2 className="text-[32px] font-sans font-bold">About Me</h2>
         <p className="text-center  text-[16px] ">
@@ -48,13 +48,13 @@ export default async function Home() {
           in algorithms, data structures, problem-solving techniques, and
           software architecture.
         </p>
-        <div className="min-h-fit flex flex-col items-center justify-center">
+        <div className="min-h-fit w-full flex flex-col items-center justify-center">
           <p className="text-[32px] ">Quick Introduction</p>
           <YouTubePlayer videoId={"YOUR_YOUTUBE_VIDEO_ID"} />
         </div>
       </section>
-      <section id="Work-Experience" className="mx-20  my-10  screen h-[458px]">
-        <div className=" h-[458px] flex flex-row  justify-center items-center gap-10 bg-[url('/version-4/work-experience-image.jpg')] bg-no-repeat bg-cover ">
+      <section id="Work-Experience" className="lg:mx-20  my-10  min-h-fit lg:h-[458px]">
+        <div className=" py-8 flex-wrap sm:flex-row  bg-pink bg-center min-h-fit lg:h-[458px] flex flex-col lg:flex-row  justify-center items-center gap-10 bg-[url('/version-4/work-experience-image2.png')] bg-no-repeat bg-cover ">
           <ExperienceCard />
           <ExperienceCard />
           <ExperienceCard />
@@ -62,21 +62,21 @@ export default async function Home() {
       </section>
       <section
         id="More"
-        className=" flex flex-col gap-20 justify-center items-center my-20"
+        className=" flex flex-col min-h-fit gap-20 justify-center px-2 items-center my-20"
       >
-        <div className="flex w-3/4 flex-row gap-6 justify-center items-center  h-[380px]">
+        <div className="flex max-w-[1200px] w-full flex-col lg:w-3/4 lg:flex-row gap-6 justify-center items-center  min-h-fit  lg:h-[380px]">
           <Image
             alt="An Image of Zachary"
             width={383}
             height={489}
-            className=" h-[382px] w-1/2 object-cover"
+            className=" lg:h-[382px] w-full lg:w-1/2 object-cover"
             src="/version-4/current-status-image.png"
           />
-          <div className="w-1/2">
+          <div className="w-full lg:w-1/2">
             <h3 className="text-[32px] text-center opacity-50 my-4">
               Current Status
             </h3>
-            <p className="text-[20px] text-center">
+            <p className="lg:text-[20px] text-[14px]  text-center">
               Working towards obtaining an Amazon Web Service Cloud Solution
               Architect Certification, have prior experience using some of the
               services, but decided to go more into detail to allow for an
@@ -85,17 +85,17 @@ export default async function Home() {
             </p>
           </div>
         </div>
-        <div className="flex flex-row-reverse w-3/4 flex-row gap-6 justify-center items-center  h-[380px]">
+        <div className="flex  max-w-[1200px] lg:flex-row-reverse lg:w-3/4 flex-col gap-6 justify-center items-center min-h-fit  lg:h-[380px]">
           <Image
             alt="An Image of Zachary"
             width={383}
             height={489}
-            className=" h-[382px] w-1/2 object-cover"
+            className=" lg:h-[382px] w-full  2xl:h-96 2xl:w- lg:w-1/2 object-cover"
             src="/version-4/skills-image.jpg"
           />
-          <div className="w-1/2">
+          <div className="w-full lg:w-1/2">
             <h3 className="text-[32px] text-center opacity-50 my-4">Skills</h3>
-            <p className="text-[20px] text-center">
+            <p className="lg:text-[20px] text-[14px] text-center">
               Working towards obtaining an Amazon Web Service Cloud Solution
               Architect Certification, have prior experience using some of the
               services, but decided to go more into detail to allow for an

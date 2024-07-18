@@ -1,29 +1,42 @@
+import Link from "next/link";
 import Image from "next/image";
 import Project from "../components/project";
 import { projectsData } from "./projects.data";
-import Link from "next/link";
-export const metadata = {
-    title: 'Projects',
-    description: 'Zachary Coats Projects',
-  }
+
 
 function Projects() {
-    return ( 
-        <div className="w-screen overflow-x-hidden min-h-screen   flex flex-col min-[400px]:px-10 md:px-20 lg:px-30 2xl:px-60 font-semibold p-4 py-12 text-stone-900 font-['Sloth'] bg-white">
-            <div className='flex-col items-center flex mt-6 mb-12 gap-4'>
-                <h1 className=" text-stone-900 -mb-1 text-4xl md:text-5xl  lg:text-9xl font-semibold">Projects</h1> 
-                <h5 className=" text-[#727272] text-lg lg:text-4xl font-semibold">Click on Project to See More</h5>
-            </div>
-            <div className=" justify-center flex flex-row gap-8 flex-wrap mb-8">
+  return (
+    <div className="min-h-screen  bg-background-light dark:bg-background-dark  py-4 bg-no-repeat flex flex-col">
+      <nav className="grid grid-cols-3 px-10 text-secondary-light dark:text-secondary-dark z-10   font-KyivTypeBold- justify-between  ">
+        <div className=" hidden group  lg:flex text-[20px] items-center  flex-row gap-4">
+          <Link href="resume" className="">
+            Resume
+          </Link>
+          <Link href="projects" className=" ">
+            Projects
+          </Link>
+          <Link href="skills">Skills</Link>
+        </div>
+        <div className=" flex items-center mx-auto justify-center">
+          <Link href="/" className="text-lg lg:text-[40px] " aria-label="Home">
+            HelloZachary
+          </Link>
+        </div>
+
+        <div className="text-[20px] px-10 hidden lg:flex items-center justify-end">
+          <Link
+            href="contact"
+            className="rounded-full border-2 p-2 px-3 border-black dark:border-white duration-700  hover:bg-[#222] hover:bg-opacity-70 hover:text-secondary-dark   dark:hover:bg-white dark:hover:text-black"
+          >
+            Contact
+          </Link>
+        </div>
+      </nav>
+      <div className=" justify-center flex flex-row mt-10 gap-8 flex-wrap mb-8">
                 {projectsData.map((current,index)=> <Project key={index} data={current} index={index}/>)}
             </div>
-            <Link className=" absolute left-0 top-2 md:top-0 items-center  flex flex-row-reverse" href="/" passHref>
-                <p className="hidden md:block text-pl">Back to the Previous Page</p>
-                <Image alt="Back Button" width={10} height={10} src="/icons/arrow_back_ios.svg" className="h-10  w-10 md:h-16 md:w-16 m-4 ml-8  rounded-full cursor-pointer  "></Image>
-            </Link>
-            
-        </div>
-     );
+    </div>
+  );
 }
 
 export default Projects;

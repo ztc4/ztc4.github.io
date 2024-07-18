@@ -6,7 +6,7 @@ function ExperienceCard({
   dateHeld = "Dec 2023 - 2024",
 }) {
   return (
-    <div className="h-[354px] font-KyivTypeMedium- dark:bg-[#222] bg-white px-4 py-4 flex flex-col justify-between border-blue w-[347px] border-4">
+    <div className="h-[354px]  font-KyivTypeMedium- min-h-fit dark:bg-[#222] bg-white px-4 py-4 flex flex-col justify-between border-blue w-[347px] border-4">
       <p className="text-2xl">{position}</p>
       <p className="font-sans text-base">{details}</p>
       <div>
