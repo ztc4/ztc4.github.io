@@ -8,7 +8,7 @@ import Nav from "./components/nav";
 export default async function Home() {
   return (
     <div className=" flex h-screen overflow-hidden">
-       <Nav />
+      <Nav />
       <div className="min-h-screen w-screen duration-1000 overflow-scroll bg-background-light dark:bg-background-dark text-secondary-light dark:text-secondary-dark overflow-x-hidden">
         <header className="h-[500px] bg-custom-bottom text-white lg:bg-center relative px-7 lg:px-20 pt-6 bg-cover bg-no-repeat bg-[url('/version-4/landing-image.jpg')] bg-blue-700">
           <nav className="grid grid-cols-3 z-10 sm:sticky top-0  font-KyivTypeBold- justify-between  ">
@@ -39,7 +39,6 @@ export default async function Home() {
                 Contact
               </Link>
             </div>
-            
           </nav>
 
           <h1 className="text-[80px]   lg:text-[128px] ml-auto absolute max bottom-12 lg:bottom-8 font-KyivTypeBold-  font-bold leading-[0.75]">
@@ -54,14 +53,14 @@ export default async function Home() {
         >
           <h2 className="text-[32px] font-sans font-bold">About Me</h2>
           <p className="text-center  text-[16px] ">
-            I'm a Software Engineer based in Atlanta, Georgia, with a profound
+            {` I'm a Software Engineer based in Atlanta, Georgia, with a profound
             fascination for the diverse applications of coding. With over a year
             of experience in full stack development, I've honed my skills
             through freelance work, developing private chatbots, and a role at
             LaunchCode where I gained experience in web development, bug fixing,
             teaching, and team collaboration. Recently, I have been deepening my
             knowledge in algorithms, data structures, problem-solving
-            techniques, and software architecture.
+            techniques, and software architecture.`}
           </p>
           <div className="min-h-fit w-full flex flex-col items-center justify-center">
             <p className="text-[32px] ">Quick Introduction</p>
@@ -116,11 +115,11 @@ export default async function Home() {
                 Skills
               </h3>
               <p className="lg:text-[20px] text-[14px] text-center">
-                Working towards obtaining an Amazon Web Service Cloud Solution
+                {`Working towards obtaining an Amazon Web Service Cloud Solution
                 Architect Certification, have prior experience using some of the
                 services, but decided to go more into detail to allow for an
                 greater understanding and also to build a foundation for things
-                I might take interest in the future
+                I might take interest in the future`}
               </p>
               <div className="flex flex-col w-full mt-8 text-[20px] justify-center items-center">
                 <label className="">See More</label>
@@ -154,7 +153,6 @@ export default async function Home() {
           </div>
         </footer>
       </div>
-     
     </div>
   );
 }
