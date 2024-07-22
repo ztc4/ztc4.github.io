@@ -1,13 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
-import YouTubePlayerFacade from './components/YouTubePlayerFacade';
+import YouTubePlayerFacade from "./components/YouTubePlayerFacade";
 import ExperienceCard from "./components/experience-card";
 
 import Nav from "./components/nav";
-
-
-
 
 export default async function Home() {
   return (
@@ -15,7 +12,14 @@ export default async function Home() {
       <Nav />
       <div className="min-h-screen w-screen duration-1000 overflow-scroll bg-background-light dark:bg-background-dark text-secondary-light dark:text-secondary-dark overflow-x-hidden">
         <header className="h-[500px] bg-custom-bottom text-white lg:bg-center relative px-7 lg:px-20 pt-6 bg-cover bg-no-repeat  bg-blue-700">
-        <Image height={500} width={1440} alt="Landing Image" src={"/version-4/landing-image.webp"}    className="absolute left-0  top-0 h-full w-full object-cover max-sm:object-custom-bottom"   priority />
+          <Image
+            height={500}
+            width={1440}
+            alt="Landing Image"
+            src={"/version-4/landing-image.webp"}
+            className="absolute left-0  top-0 h-full w-full object-cover max-sm:object-custom-bottom"
+            priority
+          />
           <nav className="grid grid-cols-3 z-10 sm:sticky top-0  font-KyivTypeBold- justify-between  ">
             <div className=" hidden group  sm:flex text-[20px] items-center just  flex-row gap-4">
               <Link href="resume" className="">
@@ -58,14 +62,11 @@ export default async function Home() {
         >
           <h2 className="text-[32px] font-sans font-bold">About Me</h2>
           <p className="text-center  text-[16px] ">
-            {` I'm a Software Engineer based in Atlanta, Georgia, with a profound
-            fascination for the diverse applications of coding. With over a year
-            of experience in full stack development, I've honed my skills
-            through freelance work, developing private chatbots, and a role at
-            LaunchCode where I gained experience in web development, bug fixing,
-            teaching, and team collaboration. Recently, I have been deepening my
-            knowledge in algorithms, data structures, problem-solving
-            techniques, and software architecture.`}
+            {` I'm a Software Engineer based in Atlanta, Georgia, with a deep fascination for the diverse applications of coding.
+             With over a year of experience in full-stack development, 
+             I've refined my skills through freelance projects, developing private chatbots, and working at LaunchCode, where I gained experience in web development, bug fixing, teaching, and team collaboration.
+              Currently, I'm focusing on deepening my expertise with AWS as I work toward my certification while advancing my latest project. 
+              I'm seeking opportunities that allow me to leverage my skill set, even if they fall outside traditional developer roles.`}
           </p>
           <div className="min-h-fit w-full flex flex-col items-center justify-center">
             <p className="text-[32px] ">Educational Video</p>
@@ -99,7 +100,7 @@ export default async function Home() {
                 Current Status
               </h3>
               <p className="lg:text-[20px] text-[14px]  text-center">
-           {`     Working towards obtaining an Amazon Web Service Cloud Solution
+                {`     Working towards obtaining an Amazon Web Service Cloud Solution
                 Architect Certification, have prior experience using some of the
                 services, but decided to go more into detail to allow for an
                 greater understanding and also to build a foundation for things
@@ -120,11 +121,9 @@ export default async function Home() {
                 Skills
               </h3>
               <p className="lg:text-[20px] text-[14px] text-center">
-                {`Working towards obtaining an Amazon Web Service Cloud Solution
-                Architect Certification, have prior experience using some of the
-                services, but decided to go more into detail to allow for an
-                greater understanding and also to build a foundation for things
-                I might take interest in the future`}
+                {`I have a broad range of skills, with my main strength being versatility.
+                 I excel in design using Figma, frontend development with Next.js and React, backend development with Spring Boot or Express.js, and deployment using AWS.
+                  This diverse skill set equips me to handle projects across various domains effectively.`}
               </p>
               <div className="flex flex-col w-full mt-8 text-[20px] justify-center items-center">
                 <label className="">See More</label>

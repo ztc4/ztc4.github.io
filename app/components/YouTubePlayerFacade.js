@@ -16,7 +16,10 @@ function YouTubePlayerFacade({ videoId, startTime }) {
   return (
     <div className="youtube-facade">
       {loadPlayer ? (
-        <YouTubePlayer videoId={videoId} startTime={startTime} />
+        <div className=' h-[280px] w-[480px]'>
+            <YouTubePlayer videoId={videoId} startTime={startTime} />
+        </div>
+        
       ) : (
         <div className="thumbnail" onClick={handleLoadPlayer}>
           <Image  height={367/1.3} width={632/1.3} src={`/version-4/youtube.png`} alt="Video Thumbnail" />
