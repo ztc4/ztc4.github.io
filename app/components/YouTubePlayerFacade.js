@@ -4,7 +4,7 @@ import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
-const YouTubePlayer = dynamic(() => import('./YouTubePlayer'), {
+const YouTubePlayer = dynamic(() => import('./YouTubePlayer.jsx'), {
   ssr: false, // Ensure it is only loaded on the client side
 });
 
