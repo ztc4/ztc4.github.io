@@ -101,7 +101,7 @@
   left: 0;
   width: 100%;
   height: 500px; /* Change this value to set the desired height */
-  background-image: url('/version-4/skills.jpg');
+  background-image: url('/version-4/skills.webp');
   background-size: cover;
   background-position: center;
   z-index: 10;

@@ -13,7 +13,7 @@ function Skills() {
   return (
     <div className=" flex h-screen overflow-hidden">
       <Nav />
-      <div className="min-h-screen w-screen skill-background bg-background-light dark:bg-background-dark  py-4 bg-no-repeat flex flex-col">
+      <div className="min-h-screen overflow-scroll w-screen skill-background bg-background-light dark:bg-background-dark  py-4 bg-no-repeat flex flex-col">
         <nav className="grid grid-cols-3 px-10 text-white z-10 sticky top-0  font-KyivTypeBold- justify-between  ">
           <div className=" hidden group  sm:flex text-[20px] items-center  flex-row gap-4">
             <Link href="resume" className="">

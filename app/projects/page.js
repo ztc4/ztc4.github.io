@@ -8,7 +8,7 @@ function Projects() {
   return (
     <div className=" flex h-screen overflow-hidden">
       <Nav />
-      <div className="min-h-screen w-screen bg-background-light dark:bg-background-dark  py-4 bg-no-repeat flex flex-col">
+      <div className="min-h-screen w-screen overflow-scroll bg-background-light dark:bg-background-dark  py-4 bg-no-repeat flex flex-col">
         <nav className="grid grid-cols-3 px-10 text-secondary-light dark:text-secondary-dark z-10   font-KyivTypeBold- justify-between  ">
           <div className=" hidden group  sm:flex text-[20px] items-center  flex-row gap-4">
             <Link href="resume" className="">

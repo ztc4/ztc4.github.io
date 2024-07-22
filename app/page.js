@@ -10,7 +10,7 @@ export default async function Home() {
     <div className=" flex h-screen overflow-hidden">
       <Nav />
       <div className="min-h-screen w-screen duration-1000 overflow-scroll bg-background-light dark:bg-background-dark text-secondary-light dark:text-secondary-dark overflow-x-hidden">
-        <header className="h-[500px] bg-custom-bottom text-white lg:bg-center relative px-7 lg:px-20 pt-6 bg-cover bg-no-repeat bg-[url('/version-4/landing-image.jpg')] bg-blue-700">
+        <header className="h-[500px] bg-custom-bottom text-white lg:bg-center relative px-7 lg:px-20 pt-6 bg-cover bg-no-repeat bg-[url('/version-4/landing-image.webp')] bg-blue-700">
           <nav className="grid grid-cols-3 z-10 sm:sticky top-0  font-KyivTypeBold- justify-between  ">
             <div className=" hidden group  sm:flex text-[20px] items-center just  flex-row gap-4">
               <Link href="resume" className="">
@@ -63,15 +63,15 @@ export default async function Home() {
             techniques, and software architecture.`}
           </p>
           <div className="min-h-fit w-full flex flex-col items-center justify-center">
-            <p className="text-[32px] ">Quick Introduction</p>
-            <YouTubePlayer videoId={"YOUR_YOUTUBE_VIDEO_ID"} />
+            <p className="text-[32px] ">Educational Video</p>
+            <YouTubePlayer videoId={"Zj338upBMtM"} />
           </div>
         </section>
         <section
           id="Work-Experience"
           className="lg:mx-20  my-10  min-h-fit lg:h-[458px]"
         >
-          <div className=" py-8 flex-wrap sm:flex-row  bg-pink bg-center min-h-fit lg:h-[458px] flex flex-col lg:flex-row  justify-center items-center gap-10 bg-[url('/version-4/work-experience-image2.png')] bg-no-repeat bg-cover ">
+          <div className=" py-8 flex-wrap sm:flex-row  bg-pink bg-center min-h-fit lg:h-[458px] flex flex-col lg:flex-row  justify-center items-center gap-10 bg-[url('/version-4/work-experience-image2.webp')] bg-no-repeat bg-cover ">
             <ExperienceCard />
             <ExperienceCard />
             <ExperienceCard />
@@ -87,7 +87,7 @@ export default async function Home() {
               width={383}
               height={489}
               className=" lg:h-[382px] w-full lg:w-1/2 object-cover"
-              src="/version-4/current-status-image.png"
+              src="/version-4/current-status-image.webp"
             />
             <div className="w-full lg:w-1/2">
               <h3 className="text-[32px] text-center opacity-50 my-4">
@@ -108,7 +108,7 @@ export default async function Home() {
               width={383}
               height={489}
               className=" lg:h-[382px] w-full  2xl:h-96 2xl:w- lg:w-1/2 object-cover"
-              src="/version-4/skills-image.jpg"
+              src="/version-4/skills-image.webp"
             />
             <div className="w-full lg:w-1/2">
               <h3 className="text-[32px] text-center opacity-50 my-4">
