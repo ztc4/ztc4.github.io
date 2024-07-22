@@ -3,10 +3,8 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import YouTubePlayer from './YoutubePlayer';
 
-const YouTubePlayer = dynamic(() => import('./YouTubePlayer.jsx'), {
-  ssr: false, // Ensure it is only loaded on the client side
-});
 
 function YouTubePlayerFacade({ videoId, startTime }) {
   const [loadPlayer, setLoadPlayer] = useState(false);
