@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
-import YouTubePlayer from "./components/YoutubePlayer";
+import YouTubePlayerFacade from './components/YouTubePlayerFacade';
 import ExperienceCard from "./components/experience-card";
+
 import Nav from "./components/nav";
+
+
+
 
 export default async function Home() {
   return (
@@ -64,7 +68,7 @@ export default async function Home() {
           </p>
           <div className="min-h-fit w-full flex flex-col items-center justify-center">
             <p className="text-[32px] ">Educational Video</p>
-            <YouTubePlayer videoId={"Zj338upBMtM"} />
+            <YouTubePlayerFacade videoId="Zj338upBMtM" startTime={0} />
           </div>
         </section>
         <section
