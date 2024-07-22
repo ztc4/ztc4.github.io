@@ -14,7 +14,8 @@ export default async function Home() {
     <div className=" flex h-screen overflow-hidden">
       <Nav />
       <div className="min-h-screen w-screen duration-1000 overflow-scroll bg-background-light dark:bg-background-dark text-secondary-light dark:text-secondary-dark overflow-x-hidden">
-        <header className="h-[500px] bg-custom-bottom text-white lg:bg-center relative px-7 lg:px-20 pt-6 bg-cover bg-no-repeat bg-[url('/version-4/landing-image.webp')] bg-blue-700">
+        <header className="h-[500px] bg-custom-bottom text-white lg:bg-center relative px-7 lg:px-20 pt-6 bg-cover bg-no-repeat  bg-blue-700">
+        <Image height={500} width={1440} alt="Landing Image" src={"/version-4/landing-image.webp"}    className="absolute left-0  top-0 h-full w-full object-cover max-sm:object-custom-bottom"   priority />
           <nav className="grid grid-cols-3 z-10 sm:sticky top-0  font-KyivTypeBold- justify-between  ">
             <div className=" hidden group  sm:flex text-[20px] items-center just  flex-row gap-4">
               <Link href="resume" className="">
@@ -25,7 +26,7 @@ export default async function Home() {
               </Link>
               <Link href="skills">Skills</Link>
             </div>
-            <div className=" flex items-center mx-auto justify-center">
+            <div className=" flex items-center mx-auto z-30 justify-center">
               <Link
                 href=""
                 className="text-lg lg:text-[40px] "

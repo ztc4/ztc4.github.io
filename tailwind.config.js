@@ -49,6 +49,9 @@ module.exports = {
       backgroundPosition: {
         'custom-bottom': '70% -150%', // Adjust the percentage as needed
       },
+      objectPosition:{
+          'custom-bottom': '70% -150%'
+      }
     },
   },
   plugins: [],
