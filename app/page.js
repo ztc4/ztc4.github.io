@@ -71,7 +71,7 @@ export default async function Home() {
           id="Work-Experience"
           className="lg:mx-20  my-10  min-h-fit lg:h-[458px]"
         >
-          <div className=" py-8 flex-wrap sm:flex-row  bg-pink bg-center min-h-fit lg:h-[458px] flex flex-col lg:flex-row  justify-center items-center gap-10 bg-[url('/version-4/work-experience-image2.webp')] bg-no-repeat bg-cover ">
+          <div className=" py-8 flex-wrap flex-row  bg-center min-h-fit lg:h-[458px] flex  justify-center items-center gap-10 bg-[url('/version-4/work-experience-image2.webp')] bg-no-repeat bg-cover ">
             <ExperienceCard />
             <ExperienceCard />
             <ExperienceCard />
